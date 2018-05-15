@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="pl-PL">
+  <head>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shop website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+
+  </head>
+
+
+
+
+
+  <body>
+
+
+
+    <section class="first-screen">
+      <div id="slider" class="slider">
+        <header class="header">
+          <a href="#" class="header__logo"></a>
+          <nav class="header__nav verticalAlign">
+            <ul class="menu">
+              <li class="menu__item"><a href="#" class="item__text">Home</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Shop</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Journal</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Elements</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Pages</a></li>
+            </ul>
+          </nav>
+          <span class="cart"></span>
+        </header>
+        <ul id="slideWrap" class="slider__slideWrap">
+
+          <li class="slideWrap__slide">
+            <div class="slide__info">
+              <p class="info__name">Sky Planet</p>
+              <a href="#" class="info__link">Shop now</a>
+            </div>
+            <p class="slide__number">1 of 3</p>
+            <img class="slide__img" src="images/imgSlider1.png" alt="plant1" />
+          </li>
+
+          <li class="slideWrap__slide">
+            <div class="slide__info">
+              <p class="info__name">Sky Planet 2</p>
+              <a href="#" class="info__link">Shop now</a>
+            </div>
+            <p class="slide__number">2 of 3</p>
+            <img class="slide__img" src="images/imgSlider2.png" alt="plant2" />
+          </li>
+
+          <li class="slideWrap__slide">
+            <div class="slide__info">
+              <p class="info__name">Sky Planet 3</p>
+              <a href="#" class="info__link">Shop now</a>
+            </div>
+            <p class="slide__number">3 of 3</p>
+            <img class="slide__img" src="images/imgSlider3.png" alt="plant3" />
+          </li>
+
+        </ul>
+        <div class="buttons">
+          <button type="button" id="prev" class="prev" href="#"></button>
+          <button type="button" id="next" class="next" href="#"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="test">
+
+    </section>
+
+
+
+
+
+
+    <script>
+      // const cities = [];
+      // const endpoint = 'http://rafalsebestjanski.pl/data.json';
+      // fetch(endpoint)
+      //   .then(blob => blob.json())
+      //   .then(data => cities.push(...data))
+      //
+      // console.log(cities);
+
+
+
+
+      var responsiveSlider = function() {
+
+        var slider = document.getElementById("slider");
+        var sliderWidth = slider.offsetWidth;
+        var slideList = document.getElementById("slideWrap");
+        var count = 1;
+        var items = slideList.querySelectorAll("li").length;
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+
+        window.addEventListener('resize', function() {
+          sliderWidth = slider.offsetWidth;
+        });
+
+        var prevSlide = function() {
+          if(count > 1) {
+            count = count - 2;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+          else if(count = 1) {
+            count = items - 1;
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+        };
+
+        var nextSlide = function() {
+          if(count < items) {
+            slideList.style.left = "-" + count * sliderWidth + "px";
+            count++;
+          }
+          else if(count = items) {
+            slideList.style.left = "0px";
+            count = 1;
+          }
+        };
+
+        next.addEventListener("click", function() {
+          nextSlide();
+        });
+
+        prev.addEventListener("click", function() {
+          prevSlide();
+        });
+
+        setInterval(function() {
+          nextSlide()
+        }, 866000);
+
+      };
+
+      window.onload = function() {
+        responsiveSlider();
+      }
+
+
+    </script>
+  </body>
+
+
+
+
+
+
+</html>
