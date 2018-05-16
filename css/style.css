@@ -189,6 +189,29 @@ h3 {
           bottom: 0; }
       .productSection .productSection__main .filters .filters__filters {
         padding-top: 35px; }
+        .productSection .productSection__main .filters .filters__filters .filters__price .inputRange {
+          height: 30px;
+          width: 310px; }
+          .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line {
+            height: 2px;
+            width: 100%;
+            position: relative;
+            background: #000; }
+            .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line .input__circle {
+              position: absolute;
+              left: 20px;
+              top: 0px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 2px solid #000;
+              background: #fff;
+              transform: translateY(-50%);
+              -webkit-transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s;
+              transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s; }
+              .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line .input__circle.input__circle--max {
+                left: 100px;
+                top: 0; }
     .productSection .productSection__main .products {
       flex: 1;
       padding-left: 40px; }

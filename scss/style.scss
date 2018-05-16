@@ -240,6 +240,35 @@ h3 {
       }
       .filters__filters {
         padding-top: 35px;
+        .filters__price {
+          .inputRange {
+            height: 30px;
+            width: 310px;
+            .input__line {
+              height: 2px;
+              width: 100%;
+              position: relative;
+              background: #000;
+              .input__circle {
+                position: absolute;
+                left: 20px;
+                top: 0px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid #000;
+                background: #fff;
+                transform: translateY(-50%);
+                -webkit-transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s;
+                transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s;
+                &.input__circle--max {
+                  left: 100px;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
       }
     }
     .products {
