@@ -109,7 +109,7 @@
             <h2 class="filters__header">Filter by</h2>
             <div class="filters__price">
               <h3 class="filters__header filters__header--2">Price</h3>
-              <div class="inputRange">
+              <div id="inputRange" class="inputRange">
                 <div id="inputLine" class="input__line">
                   <div id="inputCircleMin" class="input__circle">
 
@@ -119,11 +119,20 @@
                   </div>
                 </div>
               </div>
-              <div id="minPrice">
+              <div class="pricesAndButton">
+                <div class="prices">
+                  <div class="prices__number">
+                    <div id="minPrice" class="minMaxPrice">
 
-              </div>
-              <div id="maxPrice">
+                    </div>
+                  </div>
+                  <div class="prices__number">
+                    <div id="maxPrice" class="minMaxPrice">
 
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-filter" type="button">Filter</button>
               </div>
             </div>
             <div class="filters__color">
@@ -343,29 +352,27 @@
 
 
 
-      document.getElementById("minPrice").innerHTML = Math.round(20*2000/29) / 100;
-      document.getElementById("maxPrice").innerHTML = Math.round(100*2000/29) / 100;
+      document.getElementById("minPrice").innerHTML = Math.round(40*20/27);
+      document.getElementById("maxPrice").innerHTML = Math.round(256*20/27);
       let inputLine = document.getElementById('inputLine');
       let inputCircleMin = document.getElementById('inputCircleMin');
       let inputCircleMax = document.getElementById('inputCircleMax');
 
       inputCircleMin.onmousedown = function(event) {
         event.preventDefault(); // prevent selection
-        let circleStaysUnderCursor = event.clientX - inputCircleMin.getBoundingClientRect().left;
         let maxPrice = document.getElementById('maxPrice').innerHTML;
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
         function onMouseMove(event) {
-          let distanceFromLeft = event.clientX  - circleStaysUnderCursor - inputLine.getBoundingClientRect().left;
+          let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
           if (distanceFromLeft < 0) {
             distanceFromLeft = 0;
           }
-          console.log(circleStaysUnderCursor);
-          if (distanceFromLeft > maxPrice*29/20) {
-            distanceFromLeft = maxPrice*29/20;
+          if (distanceFromLeft > maxPrice*27/20) {
+            distanceFromLeft = maxPrice*27/20;
           }
           inputCircleMin.style.left = distanceFromLeft + 'px';
-          let price = Math.round(distanceFromLeft * 2000/29) / 100;
+          let price = Math.round(distanceFromLeft * 20/27);
           document.getElementById("minPrice").innerHTML = price;
         }
 
@@ -378,21 +385,20 @@
 
       inputCircleMax.onmousedown = function(event) {
         event.preventDefault(); // prevent selection
-        let circleStaysUnderCursor = event.clientX - inputCircleMax.getBoundingClientRect().left;
         let minPrice = document.getElementById('minPrice').innerHTML;
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
         function onMouseMove(event) {
-          let distanceFromLeft = event.clientX  - circleStaysUnderCursor - inputLine.getBoundingClientRect().left;
-          if (distanceFromLeft < minPrice*29/20) {
-            distanceFromLeft = minPrice*29/20;
+          let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
+          if (distanceFromLeft < minPrice*27/20) {
+            distanceFromLeft = minPrice*27/20;
           }
-          let rightEdge = inputLine.offsetWidth - inputCircleMax.offsetWidth;
-          if (distanceFromLeft > rightEdge) {
-            distanceFromLeft = rightEdge;
+          //let rightEdge = inputLine.offsetWidth - inputCircleMax.offsetWidth;
+          if (distanceFromLeft > 270) {
+            distanceFromLeft = 270;
           }
           inputCircleMax.style.left = distanceFromLeft + 'px';
-          let price = Math.round(distanceFromLeft * 2000/29) / 100;
+          let price = Math.round(distanceFromLeft * 20/27);
           document.getElementById("maxPrice").innerHTML = price;
         }
 
@@ -402,20 +408,6 @@
         }
 
       };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

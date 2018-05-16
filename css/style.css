@@ -189,9 +189,10 @@ h3 {
           bottom: 0; }
       .productSection .productSection__main .filters .filters__filters {
         padding-top: 35px; }
+        .productSection .productSection__main .filters .filters__filters .filters__price .filters__header {
+          margin-bottom: 33px; }
         .productSection .productSection__main .filters .filters__filters .filters__price .inputRange {
-          height: 30px;
-          width: 310px; }
+          width: 270px; }
           .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line {
             height: 2px;
             width: 100%;
@@ -199,19 +200,55 @@ h3 {
             background: #000; }
             .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line .input__circle {
               position: absolute;
-              left: 20px;
+              left: 40px;
               top: 0px;
               width: 20px;
               height: 20px;
               border-radius: 50%;
               border: 2px solid #000;
               background: #fff;
-              transform: translateY(-50%);
+              transform: translate(-50%, -50%);
               -webkit-transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s;
               transition: top 0.10s, right 0.05s, bottom 0.10s, left 0.05s; }
               .productSection .productSection__main .filters .filters__filters .filters__price .inputRange .input__line .input__circle.input__circle--max {
-                left: 100px;
+                left: 256px;
                 top: 0; }
+        .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton {
+          margin-top: 19px;
+          display: flex;
+          justify-content: space-between; }
+          .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton .prices {
+            display: flex;
+            flex-direction: row; }
+            .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton .prices .prices__number {
+              display: inline-block;
+              height: 30px;
+              width: 78px;
+              border: 1px solid #e0e0e0;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around; }
+              .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton .prices .prices__number .minMaxPrice {
+                padding: 0 0 0 11px;
+                font-size: 16px;
+                line-height: 16px;
+                letter-spacing: 1.5px;
+                color: #000;
+                opacity: 0.54;
+                font-weight: 500; }
+              .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton .prices .prices__number:nth-child(2) {
+                margin-left: 10px; }
+          .productSection .productSection__main .filters .filters__filters .filters__price .pricesAndButton .btn-filter {
+            width: 72px;
+            height: 32px;
+            background: #f5f5f5;
+            border: none;
+            color: #000;
+            font-size: 16px;
+            opacity: 0.87;
+            letter-spacing: 1px;
+            font-weight: 500;
+            outline: none; }
     .productSection .productSection__main .products {
       flex: 1;
       padding-left: 40px; }
