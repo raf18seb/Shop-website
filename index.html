@@ -139,19 +139,19 @@
               <h3 class="filters__header filters__header--2">Color</h3>
               <ul class="color__ul">
                 <li class="color__li">
-                  <span class="color__circle color__circle--first"><span class="acceptedArrow"></span></span>
+                  <span id="colorCircleFirst" class="color__circle color__circle--first"><span id="acceptedArrowFirst" class="acceptedArrow"></span></span>
                 </li>
                 <li class="color__li">
-                  <span class="color__circle color__circle--second"><span class="acceptedArrow"></span></span>
+                  <span id="colorCircleSecond" class="color__circle color__circle--second"><span id="acceptedArrowSecond" class="acceptedArrow"></span></span>
                 </li>
                 <li class="color__li">
-                  <span class="color__circle color__circle--third"><span class="acceptedArrow"></span></span>
+                  <span id="colorCircleThird" class="color__circle color__circle--third"><span id="acceptedArrowThird" class="acceptedArrow"></span></span>
                 </li>
                 <li class="color__li">
-                  <span class="color__circle color__circle--fourth"><span class="acceptedArrow"></span></span>
+                  <span id="colorCircleFourth" class="color__circle color__circle--fourth"><span  id="acceptedArrowFourth" class="acceptedArrow"></span></span>
                 </li>
                 <li class="color__li">
-                  <span class="color__circle color__circle--fifth"><span class="acceptedArrow"></span></span>
+                  <span id="colorCircleFifth" class="color__circle color__circle--fifth"><span id="acceptedArrowFifth" class="acceptedArrow"></span></span>
                 </li>
               </ul>
             </div>
@@ -169,7 +169,7 @@
                 </li>
               </ul>
             </div>
-            <div class="filters--brands">
+            <div class="filters__brands">
               <h3 class="filters__header filters__header--2">Brands</h3>
               <ul class="filters__ul brands__ul">
                 <li class="filters__li filters__li--brands">
@@ -197,7 +197,7 @@
             </div>
           </div>
           <div class="filters__tags">
-            <h2 class="filters__header">Popular Tags</h2>
+            <h2 class="filters__header aaa">Popular Tags</h2>
             <p class="tags filters__p">Simple, Minimalism, Furniture, White, Black, Accesories</p>
           </div>
         </section>
@@ -408,17 +408,17 @@
         }
 
       };
-
-
-
-
       // inputCircleMin.ondragstart = function() {
       //   return false;
       // };
 
 
-      var x = inputCircleMin.style.left;
-      console.log(x);
+      document.getElementById('colorCircleFirst').addEventListener('click', () => document.getElementById('acceptedArrowFirst').classList.toggle('isClicked'))
+      document.getElementById('colorCircleSecond').addEventListener('click', () => document.getElementById('acceptedArrowSecond').classList.toggle('isClicked'))
+      document.getElementById('colorCircleThird').addEventListener('click', () => document.getElementById('acceptedArrowThird').classList.toggle('isClicked'))
+      document.getElementById('colorCircleFourth').addEventListener('click', () => document.getElementById('acceptedArrowFourth').classList.toggle('isClicked'))
+      document.getElementById('colorCircleFifth').addEventListener('click', () => document.getElementById('acceptedArrowFifth').classList.toggle('isClicked'))
+
 
 
 
