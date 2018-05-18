@@ -536,6 +536,13 @@ h3 {
       }
     }
   }
+  .pageNumber {
+    .pageNumber__ul {
+      .pageNumber__li {
+        display: none;
+      }
+    }
+  }
 }
 
 

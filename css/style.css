@@ -430,6 +430,8 @@ h3 {
             display: inline-block; }
           .productSection .productSection__main .products .products__list .product:hover .btn__addToCart {
             display: inline-block; }
+  .productSection .pageNumber .pageNumber__ul .pageNumber__li {
+    display: none; }
 
 .test {
   height: 2000px; }
