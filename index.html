@@ -210,61 +210,61 @@
             <p class="top__showing filters__p">Showing 1 - 6 of <span class="howManyresults">24</span> results</p>
           </div>
           <ul class="products__list">
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product0" class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">Bottle Humidifier</p>
               <p class="product__price">$69.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product1" class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">Flower Scissors</p>
               <p class="product__price">$159.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product2" class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">Grey Watch</p>
               <p class="product__price">$215.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product3" class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">Sweeper and Funnel</p>
               <p class="product__price">$59.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product4"class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">White Bulb</p>
               <p class="product__price">$349.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
-            <li class="product">
-              <img class="product__img" src="" alt="" />
+            <li id="product5" class="product">
+              <!-- <img class="product__img" src="" alt="" />
               <p class="product__new">New</p>
               <button class="btn__favourite" type="button">Heart<span class="heart"></span></button>
               <p class="product__name">Teapot</p>
               <p class="product__price">$55.00</p>
-              <button class="btn__addToCart" type="button">Add to Cart</button>
+              <button class="btn__addToCart" type="button">Add to Cart</button> -->
             </li>
           </ul>
         </section>
       </div>
       <div class="pageNumber">
         <ul class="pageNumber__ul">
-          <li class="pageNumber__li">01</li>
-          <li class="pageNumber__li">02</li>
+          <li id="page1" class="pageNumber__li">01</li>
+          <li id="page2" class="pageNumber__li">02</li>
           <li class="pageNumber__li">03</li>
           <li class="pageNumber__li">04</li>
           <li class="pageNumber__li">05</li>
@@ -283,6 +283,10 @@
 
 
     <script>
+
+
+
+
       // const cities = [];
       // const endpoint = 'http://rafalsebestjanski.pl/data.json';
       // fetch(endpoint)
@@ -290,6 +294,827 @@
       //   .then(data => cities.push(...data))
       //
       // console.log(cities);
+
+      const json = [
+  {
+    "product":"fsdfasdfsadfnscof",
+    "price":"$106.87",
+    "color":"grey",
+    "size":"Large",
+    "producer":"Banshu Hamono"
+  },
+{
+  "product":"Voyatouch",
+  "price":"$29.85",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Bitwolf",
+  "price":"$168.35",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Flowdesk",
+  "price":"$69.10",
+  "color":"red",
+  "size":"Small",
+  "producer":"Dodge"
+},
+{
+  "product":"Fixflex",
+  "price":"$183.62",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Bower"
+},
+{
+  "product":"Keylex",
+  "price":"$178.55",
+  "color":"red",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Zaam-Dox",
+  "price":"$124.69",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Dodge"
+},
+{
+  "product":"Fixflex",
+  "price":"$11.28",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Zathin",
+  "price":"$168.03",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Braun"
+},
+{
+  "product":"Greenlam",
+  "price":"$183.97",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Bower"
+},
+{"product":"Tresom",
+  "price":"$30.32",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Job",
+  "price":"$134.65",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Trippledex",
+  "price":"$57.98",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Y-Solowarm",
+  "price":"$70.47",
+  "color":"white",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Matsoft",
+  "price":"$11.73",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Bower"
+},
+{
+  "product":"Alpha",
+  "price":"$75.09",
+  "color":"red",
+  "size":"Small",
+  "producer":"Braun"
+},
+{
+  "product":"Home Ing",
+  "price":"$193.83",
+  "color":"white",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Fixflex",
+  "price":"$181.39",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Dodge"
+},
+{
+  "product":"Hatity",
+  "price":"$54.61",
+  "color":"green",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Zoolab",
+  "price":"$61.80",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Bower"
+},
+{
+  "product":"Opela",
+  "price":"$93.11",
+  "color":"green",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Zamit",
+  "price":"$75.61",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Biodex",
+  "price":"$199.36",
+  "color":"green",
+  "size":"Large",
+  "producer":"Dodge"
+},
+{
+  "product":"Kanlam",
+  "price":"$45.02",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{"product":"Zaam-Dox",
+  "price":"$197.65",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Zamit",
+  "price":"$40.80",
+  "color":"green",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Cardguard",
+  "price":"$98.83",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Zathin",
+  "price":"$189.94",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Alpha",
+  "price":"$116.42",
+  "color":"red",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Wrapsafe",
+  "price":"$23.27",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Bower"
+},
+{
+  "product":"Mat Lam Tam",
+  "price":"$39.39",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Mat Lam Tam",
+  "price":"$57.12",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Bigtax",
+  "price":"$189.75",
+  "color":"green",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Tampflex",
+  "price":"$27.49",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Zaam-Dox",
+  "price":"$53.35",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Stronghold",
+  "price":"$69.36",
+  "color":"green",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Cookley",
+  "price":"$61.80",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Solarbreeze"
+  ,"price":"$129.56",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Gembucket",
+  "price":"$11.49",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Sonsing",
+  "price":"$182.24",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Trippledex",
+  "price":"$51.79",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Cardguard",
+  "price":"$189.14",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Field"
+},
+{
+  "product":"Bigtax"
+  ,"price":"$74.96",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Biodex",
+  "price":"$42.49",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Bitwolf",
+  "price":"$33.67",
+  "color":"red",
+  "size":"Small",
+  "producer":"Menu"
+},
+{
+  "product":"Daltfresh",
+  "price":"$145.64",
+  "color":"red",
+  "size":"Small",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Konklab",
+  "price":"$95.69",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Prodder",
+  "price":"$14.30",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Vagram",
+  "price":"$18.89",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Asoka",
+  "price":"$76.23",
+  "color":"white",
+  "size":"Small",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Viva",
+  "price":"$39.44",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Dodge"
+},
+{
+  "product":"Toughjoyfax",
+  "price":"$175.33",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Sub-Ex",
+  "price":"$177.78",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Zamit",
+  "price":"$49.72",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Field"
+},
+{
+  "product":"Voltsillam",
+  "price":"$116.14",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Bower"
+},
+{
+  "product":"Ronstring",
+  "price":"$112.64",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Job",
+  "price":"$56.79",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Stringtough",
+  "price":"$160.06",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Home Ing",
+  "price":"$23.40",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Menu"}
+  ,
+{
+  "product":"Prodder",
+  "price":"$33.02",
+  "color":"red",
+  "size":"Large",
+  "producer":"Field"
+},
+{
+  "product":"Home Ing",
+  "price":"$190.76",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Subin",
+  "price":"$40.13",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Flexidy",
+  "price":"$6.56",
+  "color":"red",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Voyatouch",
+  "price":"$66.02",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Mat Lam Tam",
+  "price":"$153.71",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Zaam-Dox",
+  "price":"$93.96",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Field"
+},
+{
+  "product":"Cardguard",
+  "price":"$37.40",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Job",
+  "price":"$155.20",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Fintone",
+  "price":"$182.59",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Stronghold",
+  "price":"$124.06",
+  "color":"white",
+  "size":"Small",
+  "producer":"Bower"
+},
+{
+  "product":"Keylex",
+  "price":"$97.06",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Daltfresh",
+  "price":"$97.28",
+  "color":"red",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Cardify",
+  "price":"$84.88",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Kanlam",
+  "price":"$146.59",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Wrapsafe",
+  "price":"$161.53",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Bower"
+},
+{
+  "product":"It",
+  "price":"$19.00",
+  "color":"red",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Rank",
+  "price":"$43.38",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Kanlam",
+  "price":"$180.70",
+  "color":"green",
+  "size":"Small",
+  "producer":"Dodge"
+},
+{
+  "product":"Viva",
+  "price":"$186.85",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Dodge"
+},
+{
+  "product":"Latlux",
+  "price":"$189.99",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Braun"
+},
+{
+  "product":"Transcof",
+  "price":"$79.48",
+  "color":"red",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Mat Lam Tam",
+  "price":"$184.90",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Subin",
+  "price":"$193.07",
+  "color":"white",
+  "size":"Small",
+  "producer":"Braun"
+},
+{
+  "product":"Hatity",
+  "price":"$132.94",
+  "color":"white",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Subin",
+  "price":"$191.66",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Bower"
+},
+{
+  "product":"Asoka",
+  "price":"$95.95",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Stim",
+  "price":"$89.64",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Bower"
+},
+{
+  "product":"Cardguard",
+  "price":"$168.67",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Lotstring",
+  "price":"$186.69",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Fix San",
+  "price":"$98.09",
+  "color":"green",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+},
+{
+  "product":"Biodex",
+  "price":"$55.08",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Subin",
+  "price":"$58.25",
+  "color":"red",
+  "size":"Large",
+  "producer":"Henry Wilson"
+},
+{
+  "product":"Domainer",
+  "price":"$117.17",
+  "color":"red",
+  "size":"Large",
+  "producer":"Field"
+},
+{
+  "product":"Bitwolf",
+  "price":"$136.29",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+},
+{
+  "product":"Alphazap",
+  "price":"$198.18",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"It",
+  "price":"$181.36",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Braun"
+},
+{
+  "product":"Opela",
+  "price":"$8.49",
+  "color":"green",
+  "size":"Large",
+  "producer":"Menu"
+},
+{
+  "product":"Sonair",
+  "price":"$101.35",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Zamit",
+  "price":"$23.36",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+},
+{
+  "product":"Bigtax",
+  "price":"$123.25",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  }
+]
+
+let display = [
+  {
+    "product":"Cardguard",
+    "price":"$168.67",
+    "color":"blue",
+    "size":"Large",
+    "producer":"Banshu Hamono"
+  },
+  {
+    "product":"Lotstring",
+    "price":"$186.69",
+    "color":"grey",
+    "size":"Medium",
+    "producer":"Banshu Hamono"
+  },
+  {
+    "product":"Fix San",
+    "price":"$98.09",
+    "color":"green",
+    "size":"Large",
+    "producer":"Banshu Hamono"
+  },
+  {
+    "product":"Biodex",
+    "price":"$55.08",
+    "color":"red",
+    "size":"Large",
+    "producer":"Elevenplus"
+  },
+  {
+    "product":"Subin",
+    "price":"$58.25",
+    "color":"red",
+    "size":"Large",
+    "producer":"Henry Wilson"
+  },
+  {
+    "product":"Domainer",
+    "price":"$117.17",
+    "color":"red",
+    "size":"Large",
+    "producer":"Field"
+  },
+  {
+    "product":"Biodex",
+    "price":"$55.08",
+    "color":"red",
+    "size":"Large",
+    "producer":"Elevenplus"
+  },
+  {
+    "product":"Subin",
+    "price":"$58.25",
+    "color":"red",
+    "size":"Large",
+    "producer":"Henry Wilson"
+  },
+  {
+    "product":"Domainer",
+    "price":"$117.17",
+    "color":"red",
+    "size":"Large",
+    "producer":"Field"
+  },
+  {
+    "product":"Bitwolf",
+    "price":"$136.29",
+    "color":"grey",
+    "size":"Small",
+    "producer":"Field"
+  }
+];
+
+
+
+
+for (let i=0; i < 6; i++ ) {
+  document.getElementById('product' + i).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[i].product + '</p><p class="product__price">' + display[i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
+}
+
+document.getElementById('page2').addEventListener('click', function() {
+  for (let i=0; i < (display.length - 6); i++ ) {
+    document.getElementById('product' + i).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[i + 6].product + '</p><p class="product__price">' + display[i + 6].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,6 +1173,9 @@
 
       window.onload = function() {
         responsiveSlider();
+        function parse(jsonp) {
+          console.log(jsonp);
+        }
       }
 
 
@@ -427,7 +1255,7 @@
 
 
 
-
+//white, black, yellow, red, green
 
 
 </html>
