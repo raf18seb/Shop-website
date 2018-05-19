@@ -376,6 +376,35 @@ h3 {
           .filters__header--2 {
             margin: 43px 0 6px 0;
           }
+          .size__ul {
+            .filters__li--size {
+              .size {
+                @include transition (0ms);
+                display: inline-block;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+                &.isClicked {
+                  font-weight: 600;
+                  position: relative;
+                  @include transition (0ms);
+                  :after {
+                    content: "";
+                    position: absolute;
+                    top: 38%;
+                    right: -30px;
+                    border: solid black;
+                    border-width: 0 1.5px 1.5px 0;
+                    padding: 6px 2.5px;
+                    opacity: 1;
+                    transform: translate(-50%,-50%) rotate(45deg);
+                    -webkit-transform: translate(-50%,-50%) rotate(45deg);
+                  }
+                }
+              }
+            }
+          }
         }
         .filters__brands {
           position: relative;
@@ -393,6 +422,33 @@ h3 {
           }
           .brands__ul {
             padding-bottom: 43px;
+            .filters__li--brands {
+              .brands {
+                @include transition (0ms);
+                display: inline-block;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+                &.isClicked {
+                  font-weight: 600;
+                  position: relative;
+                  @include transition (0ms);
+                  :after {
+                    content: "";
+                    position: absolute;
+                    top: 38%;
+                    right: -30px;
+                    border: solid black;
+                    border-width: 0 1.5px 1.5px 0;
+                    padding: 6px 2.5px;
+                    opacity: 1;
+                    transform: translate(-50%,-50%) rotate(45deg);
+                    -webkit-transform: translate(-50%,-50%) rotate(45deg);
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -538,8 +594,11 @@ h3 {
   }
   .pageNumber {
     .pageNumber__ul {
-      .pageNumber__li {
-        display: none;
+      .as {
+        display: inline-block;
+        &.pageNumber__li {
+          display: none;
+        }
       }
     }
   }
