@@ -83,25 +83,25 @@
             <h2 class="categories__header">Categories</h2>
             <ul class="filters__ul categories__ul">
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">All products<span class="quantity"></span></p>
+                <button type="button" id="categoryFirst" class="category filters__p">All categories<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Living<span class="quantity"></span></p>
+                <button type="button" id="categorySecond" class="category filters__p">Living<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Dining<span class="quantity"></span></p>
+                <button type="button" id="categoryThird" class="category filters__p">Dining<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Furniture<span class="quantity"></span></p>
+                <button type="button" id="categoryFourth" class="category filters__p">Furniture<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Lighting<span class="quantity"></span></p>
+                <button type="button" id="categoryFifth" class="category filters__p">Lighting<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Technics<span class="quantity"></span></p>
+                <button type="button" id="categorySixth" class="category filters__p">Technics<span class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <p class="categories__category filters__p">Accessories<span class="quantity"></span></p>
+                <button type="button" id="categorySeventh" class="category filters__p">Accessories<span class="quantity"></span></button>
               </li>
             </ul>
           </div>
@@ -262,6 +262,7 @@
         </section>
       </div>
       <div class="pageNumber">
+        <button type="button" id="pageArrowLeft" class="pageNumber__pageArrow pageNumber__pageArrow--left"></button>
         <ul class="pageNumber__ul">
           <li data-pagenumber="1" id="page1" class="as pageNumber__li">01</li>
           <li data-pagenumber="2" id="page2" class="as pageNumber__li">02</li>
@@ -281,6 +282,7 @@
           <li data-pagenumber="16" id="page16" class="as pageNumber__li">16</li>
           <li data-pagenumber="17" id="page17" class="as pageNumber__li">17</li>
         </ul>
+        <button type="button" id="pageArrowRight" class="pageNumber__pageArrow pageNumber__pageArrow--right"></button>
       </div>
 
     </section>
@@ -311,6 +313,7 @@
   {
     "product":"fsdfasdfsadfnscof",
     "price":"$106.87",
+    "category":"Living",
     "color":"grey",
     "size":"Large",
     "producer":"Banshu Hamono"
@@ -318,6 +321,7 @@
 {
   "product":"Voyatouch",
   "price":"$29.85",
+  "category":"Living",
   "color":"grey",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -325,6 +329,7 @@
 {
   "product":"Bitwolf",
   "price":"$168.35",
+  "category":"Dining",
   "color":"grey",
   "size":"Large",
   "producer":"Bower"
@@ -332,6 +337,7 @@
 {
   "product":"Flowdesk",
   "price":"$69.10",
+  "category":"Lighting",
   "color":"red",
   "size":"Small",
   "producer":"Dodge"
@@ -339,6 +345,7 @@
 {
   "product":"Fixflex",
   "price":"$183.62",
+  "category":"Living",
   "color":"grey",
   "size":"Medium",
   "producer":"Bower"
@@ -346,6 +353,7 @@
 {
   "product":"Keylex",
   "price":"$178.55",
+  "category":"Technics",
   "color":"red",
   "size":"Small",
   "producer":"Banshu Hamono"
@@ -353,6 +361,7 @@
 {
   "product":"Zaam-Dox",
   "price":"$124.69",
+  "category":"Furniture",
   "color":"white",
   "size":"Medium",
   "producer":"Dodge"
@@ -360,6 +369,7 @@
 {
   "product":"Fixflex",
   "price":"$11.28",
+  "category":"Accessories",
   "color":"blue",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -367,6 +377,7 @@
 {
   "product":"Zathin",
   "price":"$168.03",
+  "category":"Lighting",
   "color":"red",
   "size":"Medium",
   "producer":"Braun"
@@ -374,12 +385,14 @@
 {
   "product":"Greenlam",
   "price":"$183.97",
+  "category":"Technics",
   "color":"grey",
   "size":"Medium",
   "producer":"Bower"
 },
 {"product":"Tresom",
   "price":"$30.32",
+  "category":"Living",
   "color":"white",
   "size":"Large",
   "producer":"Bower"
@@ -387,6 +400,7 @@
 {
   "product":"Job",
   "price":"$134.65",
+  "category":"Living",
   "color":"white",
   "size":"Large",
   "producer":"Braun"
@@ -394,6 +408,7 @@
 {
   "product":"Trippledex",
   "price":"$57.98",
+  "category":"Dining",
   "color":"white",
   "size":"Large",
   "producer":"Bower"
@@ -401,6 +416,7 @@
 {
   "product":"Y-Solowarm",
   "price":"$70.47",
+  "category":"Furniture",
   "color":"white",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -408,6 +424,7 @@
 {
   "product":"Matsoft",
   "price":"$11.73",
+  "category":"Dining",
   "color":"red",
   "size":"Medium",
   "producer":"Bower"
@@ -415,6 +432,7 @@
 {
   "product":"Alpha",
   "price":"$75.09",
+  "category":"Living",
   "color":"red",
   "size":"Small",
   "producer":"Braun"
@@ -422,6 +440,7 @@
 {
   "product":"Home Ing",
   "price":"$193.83",
+  "category":"Living",
   "color":"white",
   "size":"Small",
   "producer":"Field"
@@ -429,6 +448,7 @@
 {
   "product":"Fixflex",
   "price":"$181.39",
+  "category":"Dining",
   "color":"grey",
   "size":"Small",
   "producer":"Dodge"
@@ -436,6 +456,7 @@
 {
   "product":"Hatity",
   "price":"$54.61",
+  "category":"Dining",
   "color":"green",
   "size":"Small",
   "producer":"Field"
@@ -443,6 +464,7 @@
 {
   "product":"Zoolab",
   "price":"$61.80",
+  "category":"Living",
   "color":"grey",
   "size":"Small",
   "producer":"Bower"
@@ -450,6 +472,7 @@
 {
   "product":"Opela",
   "price":"$93.11",
+  "category":"Dining",
   "color":"green",
   "size":"Large",
   "producer":"Bower"
@@ -457,6 +480,7 @@
 {
   "product":"Zamit",
   "price":"$75.61",
+  "category":"Technics",
   "color":"white",
   "size":"Large",
   "producer":"Braun"
@@ -464,6 +488,7 @@
 {
   "product":"Biodex",
   "price":"$199.36",
+  "category":"Living",
   "color":"green",
   "size":"Large",
   "producer":"Dodge"
@@ -471,12 +496,14 @@
 {
   "product":"Kanlam",
   "price":"$45.02",
+  "category":"Technics",
   "color":"blue",
   "size":"Large",
   "producer":"Banshu Hamono"
 },
 {"product":"Zaam-Dox",
   "price":"$197.65",
+  "category":"Furniture",
   "color":"grey",
   "size":"Large",
   "producer":"Elevenplus"
@@ -484,6 +511,7 @@
 {
   "product":"Zamit",
   "price":"$40.80",
+  "category":"Furniture",
   "color":"green",
   "size":"Small",
   "producer":"Banshu Hamono"
@@ -491,6 +519,7 @@
 {
   "product":"Cardguard",
   "price":"$98.83",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Elevenplus"
@@ -498,6 +527,7 @@
 {
   "product":"Zathin",
   "price":"$189.94",
+  "category":"Living",
   "color":"white",
   "size":"Large",
   "producer":"Elevenplus"
@@ -505,6 +535,7 @@
 {
   "product":"Alpha",
   "price":"$116.42",
+  "category":"Dining",
   "color":"red",
   "size":"Large",
   "producer":"Braun"
@@ -512,6 +543,7 @@
 {
   "product":"Wrapsafe",
   "price":"$23.27",
+  "category":"Lighting",
   "color":"blue",
   "size":"Small",
   "producer":"Bower"
@@ -519,6 +551,7 @@
 {
   "product":"Mat Lam Tam",
   "price":"$39.39",
+  "category":"Living",
   "color":"blue",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -526,6 +559,7 @@
 {
   "product":"Mat Lam Tam",
   "price":"$57.12",
+  "category":"Dining",
   "color":"grey",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -533,6 +567,7 @@
 {
   "product":"Bigtax",
   "price":"$189.75",
+  "category":"Furniture",
   "color":"green",
   "size":"Small",
   "producer":"Field"
@@ -540,6 +575,7 @@
 {
   "product":"Tampflex",
   "price":"$27.49",
+  "category":"Furniture",
   "color":"grey",
   "size":"Large",
   "producer":"Bower"
@@ -547,6 +583,7 @@
 {
   "product":"Zaam-Dox",
   "price":"$53.35",
+  "category":"Technics",
   "color":"white",
   "size":"Medium",
   "producer":"Henry Wilson"
@@ -554,6 +591,7 @@
 {
   "product":"Stronghold",
   "price":"$69.36",
+  "category":"Furniture",
   "color":"green",
   "size":"Medium",
   "producer":"Banshu Hamono"
@@ -561,6 +599,7 @@
 {
   "product":"Cookley",
   "price":"$61.80",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Bower"
@@ -568,6 +607,7 @@
 {
   "product":"Solarbreeze"
   ,"price":"$129.56",
+  "category":"Accessories",
   "color":"red",
   "size":"Large",
   "producer":"Elevenplus"
@@ -575,6 +615,7 @@
 {
   "product":"Gembucket",
   "price":"$11.49",
+  "category":"Furniture",
   "color":"grey",
   "size":"Small",
   "producer":"Field"
@@ -582,6 +623,7 @@
 {
   "product":"Sonsing",
   "price":"$182.24",
+  "category":"Furniture",
   "color":"blue",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -589,6 +631,7 @@
 {
   "product":"Trippledex",
   "price":"$51.79",
+  "category":"Furniture",
   "color":"grey",
   "size":"Large",
   "producer":"Menu"
@@ -596,6 +639,7 @@
 {
   "product":"Cardguard",
   "price":"$189.14",
+  "category":"Dining",
   "color":"blue",
   "size":"Large",
   "producer":"Field"
@@ -603,6 +647,7 @@
 {
   "product":"Bigtax"
   ,"price":"$74.96",
+  "category":"Dining",
   "color":"white",
   "size":"Medium",
   "producer":"Elevenplus"
@@ -610,6 +655,7 @@
 {
   "product":"Biodex",
   "price":"$42.49",
+  "category":"Technics",
   "color":"blue",
   "size":"Small",
   "producer":"Elevenplus"
@@ -617,6 +663,7 @@
 {
   "product":"Bitwolf",
   "price":"$33.67",
+  "category":"Living",
   "color":"red",
   "size":"Small",
   "producer":"Menu"
@@ -624,6 +671,7 @@
 {
   "product":"Daltfresh",
   "price":"$145.64",
+  "category":"Living",
   "color":"red",
   "size":"Small",
   "producer":"Elevenplus"
@@ -631,6 +679,7 @@
 {
   "product":"Konklab",
   "price":"$95.69",
+  "category":"Living",
   "color":"white",
   "size":"Large",
   "producer":"Elevenplus"
@@ -638,6 +687,7 @@
 {
   "product":"Prodder",
   "price":"$14.30",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Elevenplus"
@@ -645,6 +695,7 @@
 {
   "product":"Vagram",
   "price":"$18.89",
+  "category":"Technics",
   "color":"grey",
   "size":"Large",
   "producer":"Braun"
@@ -652,6 +703,7 @@
 {
   "product":"Asoka",
   "price":"$76.23",
+  "category":"Accessories",
   "color":"white",
   "size":"Small",
   "producer":"Elevenplus"
@@ -659,6 +711,7 @@
 {
   "product":"Viva",
   "price":"$39.44",
+  "category":"Living",
   "color":"grey",
   "size":"Small",
   "producer":"Dodge"
@@ -666,6 +719,7 @@
 {
   "product":"Toughjoyfax",
   "price":"$175.33",
+  "category":"Lighting",
   "color":"grey",
   "size":"Large",
   "producer":"Elevenplus"
@@ -673,6 +727,7 @@
 {
   "product":"Sub-Ex",
   "price":"$177.78",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Bower"
@@ -680,6 +735,7 @@
 {
   "product":"Zamit",
   "price":"$49.72",
+  "category":"Technics",
   "color":"red",
   "size":"Medium",
   "producer":"Field"
@@ -687,6 +743,7 @@
 {
   "product":"Voltsillam",
   "price":"$116.14",
+  "category":"Accessories",
   "color":"white",
   "size":"Medium",
   "producer":"Bower"
@@ -694,6 +751,7 @@
 {
   "product":"Ronstring",
   "price":"$112.64",
+  "category":"Lighting",
   "color":"grey",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -701,6 +759,7 @@
 {
   "product":"Job",
   "price":"$56.79",
+  "category":"Living",
   "color":"white",
   "size":"Large",
   "producer":"Bower"
@@ -708,6 +767,7 @@
 {
   "product":"Stringtough",
   "price":"$160.06",
+  "category":"Living",
   "color":"blue",
   "size":"Small",
   "producer":"Elevenplus"
@@ -715,6 +775,7 @@
 {
   "product":"Home Ing",
   "price":"$23.40",
+  "category":"Technics",
   "color":"blue",
   "size":"Large",
   "producer":"Menu"}
@@ -722,6 +783,7 @@
 {
   "product":"Prodder",
   "price":"$33.02",
+  "category":"Lighting",
   "color":"red",
   "size":"Large",
   "producer":"Field"
@@ -729,6 +791,7 @@
 {
   "product":"Home Ing",
   "price":"$190.76",
+  "category":"Technics",
   "color":"blue",
   "size":"Medium",
   "producer":"Banshu Hamono"
@@ -736,6 +799,7 @@
 {
   "product":"Subin",
   "price":"$40.13",
+  "category":"Lighting",
   "color":"blue",
   "size":"Large",
   "producer":"Menu"
@@ -743,6 +807,7 @@
 {
   "product":"Flexidy",
   "price":"$6.56",
+  "category":"Lighting",
   "color":"red",
   "size":"Large",
   "producer":"Menu"
@@ -750,6 +815,7 @@
 {
   "product":"Voyatouch",
   "price":"$66.02",
+  "category":"Accessories",
   "color":"grey",
   "size":"Medium",
   "producer":"Elevenplus"
@@ -757,6 +823,7 @@
 {
   "product":"Mat Lam Tam",
   "price":"$153.71",
+  "category":"Accessories",
   "color":"grey",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -764,6 +831,7 @@
 {
   "product":"Zaam-Dox",
   "price":"$93.96",
+  "category":"Technics",
   "color":"blue",
   "size":"Medium",
   "producer":"Field"
@@ -771,6 +839,7 @@
 {
   "product":"Cardguard",
   "price":"$37.40",
+  "category":"Lighting",
   "color":"white",
   "size":"Medium",
   "producer":"Henry Wilson"
@@ -778,6 +847,7 @@
 {
   "product":"Job",
   "price":"$155.20",
+  "category":"Lighting",
   "color":"grey",
   "size":"Medium",
   "producer":"Banshu Hamono"
@@ -785,6 +855,7 @@
 {
   "product":"Fintone",
   "price":"$182.59",
+  "category":"Accessories",
   "color":"grey",
   "size":"Large",
   "producer":"Menu"
@@ -792,6 +863,7 @@
 {
   "product":"Stronghold",
   "price":"$124.06",
+  "category":"Technics",
   "color":"white",
   "size":"Small",
   "producer":"Bower"
@@ -799,6 +871,7 @@
 {
   "product":"Keylex",
   "price":"$97.06",
+  "category":"Lighting",
   "color":"blue",
   "size":"Large",
   "producer":"Bower"
@@ -806,6 +879,7 @@
 {
   "product":"Daltfresh",
   "price":"$97.28",
+  "category":"Accessories",
   "color":"red",
   "size":"Small",
   "producer":"Banshu Hamono"
@@ -813,6 +887,7 @@
 {
   "product":"Cardify",
   "price":"$84.88",
+  "category":"Dining",
   "color":"blue",
   "size":"Medium",
   "producer":"Banshu Hamono"
@@ -820,6 +895,7 @@
 {
   "product":"Kanlam",
   "price":"$146.59",
+  "category":"Technics",
   "color":"blue",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -827,6 +903,7 @@
 {
   "product":"Wrapsafe",
   "price":"$161.53",
+  "category":"Accessories",
   "color":"blue",
   "size":"Small",
   "producer":"Bower"
@@ -834,6 +911,7 @@
 {
   "product":"It",
   "price":"$19.00",
+  "category":"Lighting",
   "color":"red",
   "size":"Large",
   "producer":"Braun"
@@ -841,6 +919,7 @@
 {
   "product":"Rank",
   "price":"$43.38",
+  "category":"Dining",
   "color":"red",
   "size":"Large",
   "producer":"Elevenplus"
@@ -848,6 +927,7 @@
 {
   "product":"Kanlam",
   "price":"$180.70",
+  "category":"Living",
   "color":"green",
   "size":"Small",
   "producer":"Dodge"
@@ -855,6 +935,7 @@
 {
   "product":"Viva",
   "price":"$186.85",
+  "category":"Living",
   "color":"grey",
   "size":"Small",
   "producer":"Dodge"
@@ -862,6 +943,7 @@
 {
   "product":"Latlux",
   "price":"$189.99",
+  "category":"Dining",
   "color":"white",
   "size":"Medium",
   "producer":"Braun"
@@ -869,6 +951,7 @@
 {
   "product":"Transcof",
   "price":"$79.48",
+  "category":"Technics",
   "color":"red",
   "size":"Large",
   "producer":"Menu"
@@ -876,6 +959,7 @@
 {
   "product":"Mat Lam Tam",
   "price":"$184.90",
+  "category":"Accessories",
   "color":"grey",
   "size":"Small",
   "producer":"Field"
@@ -883,6 +967,7 @@
 {
   "product":"Subin",
   "price":"$193.07",
+  "category":"Accessories",
   "color":"white",
   "size":"Small",
   "producer":"Braun"
@@ -890,6 +975,7 @@
 {
   "product":"Hatity",
   "price":"$132.94",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -897,6 +983,7 @@
 {
   "product":"Subin",
   "price":"$191.66",
+  "category":"Accessories",
   "color":"blue",
   "size":"Large",
   "producer":"Bower"
@@ -904,6 +991,7 @@
 {
   "product":"Asoka",
   "price":"$95.95",
+  "category":"Lighting",
   "color":"white",
   "size":"Large",
   "producer":"Braun"
@@ -911,6 +999,7 @@
 {
   "product":"Stim",
   "price":"$89.64",
+  "category":"Dining",
   "color":"grey",
   "size":"Small",
   "producer":"Bower"
@@ -918,6 +1007,7 @@
 {
   "product":"Cardguard",
   "price":"$168.67",
+  "category":"Furniture",
   "color":"blue",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -925,6 +1015,7 @@
 {
   "product":"Lotstring",
   "price":"$186.69",
+  "category":"Technics",
   "color":"grey",
   "size":"Medium",
   "producer":"Banshu Hamono"
@@ -932,6 +1023,7 @@
 {
   "product":"Fix San",
   "price":"$98.09",
+  "category":"Lighting",
   "color":"green",
   "size":"Large",
   "producer":"Banshu Hamono"
@@ -939,6 +1031,7 @@
 {
   "product":"Biodex",
   "price":"$55.08",
+  "category":"Accessories",
   "color":"red",
   "size":"Large",
   "producer":"Elevenplus"
@@ -946,6 +1039,7 @@
 {
   "product":"Subin",
   "price":"$58.25",
+  "category":"Lighting",
   "color":"red",
   "size":"Large",
   "producer":"Henry Wilson"
@@ -953,6 +1047,7 @@
 {
   "product":"Domainer",
   "price":"$117.17",
+  "category":"Living",
   "color":"red",
   "size":"Large",
   "producer":"Field"
@@ -960,6 +1055,7 @@
 {
   "product":"Bitwolf",
   "price":"$136.29",
+  "category":"Furniture",
   "color":"grey",
   "size":"Small",
   "producer":"Field"
@@ -967,6 +1063,7 @@
 {
   "product":"Alphazap",
   "price":"$198.18",
+  "category":"Technics",
   "color":"blue",
   "size":"Large",
   "producer":"Braun"
@@ -974,6 +1071,7 @@
 {
   "product":"It",
   "price":"$181.36",
+  "category":"Furniture",
   "color":"grey",
   "size":"Large",
   "producer":"Braun"
@@ -981,6 +1079,7 @@
 {
   "product":"Opela",
   "price":"$8.49",
+  "category":"Lighting",
   "color":"green",
   "size":"Large",
   "producer":"Menu"
@@ -988,6 +1087,7 @@
 {
   "product":"Sonair",
   "price":"$101.35",
+  "category":"Furniture",
   "color":"blue",
   "size":"Large",
   "producer":"Elevenplus"
@@ -995,6 +1095,7 @@
 {
   "product":"Zamit",
   "price":"$23.36",
+  "category":"Accessories",
   "color":"white",
   "size":"Large",
   "producer":"Elevenplus"
@@ -1002,6 +1103,7 @@
 {
   "product":"Bigtax",
   "price":"$123.25",
+  "category":"Furniture",
   "color":"grey",
   "size":"Small",
   "producer":"Banshu Hamono"
@@ -1154,8 +1256,10 @@
 
 
 
-      document.getElementById("minPrice").innerHTML = Math.round(40*20/27);
-      document.getElementById("maxPrice").innerHTML = Math.round(256*20/27);
+      // document.getElementById("minPrice").innerHTML = Math.round(40*20/27);
+      // document.getElementById("maxPrice").innerHTML = Math.round(256*20/27);
+      document.getElementById("minPrice").innerHTML = 0;
+      document.getElementById("maxPrice").innerHTML = 200;
       let inputLine = document.getElementById('inputLine');
       let inputCircleMin = document.getElementById('inputCircleMin');
       let inputCircleMax = document.getElementById('inputCircleMax');
@@ -1322,6 +1426,98 @@
       }
 
 
+      document.getElementById('categoryFirst').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (this.classList.contains('isClicked')) {
+          document.getElementById('categorySecond').classList.add('isClicked');
+          document.getElementById('categoryThird').classList.add('isClicked');
+          document.getElementById('categoryFourth').classList.add('isClicked');
+          document.getElementById('categoryFifth').classList.add('isClicked');
+          document.getElementById('categorySixth').classList.add('isClicked');
+          document.getElementById('categorySeventh').classList.add('isClicked');
+        }
+        else {
+          document.getElementById('categorySecond').classList.remove('isClicked');
+          document.getElementById('categoryThird').classList.remove('isClicked');
+          document.getElementById('categoryFourth').classList.remove('isClicked');
+          document.getElementById('categoryFifth').classList.remove('isClicked');
+          document.getElementById('categorySixth').classList.remove('isClicked');
+          document.getElementById('categorySeventh').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categorySecond').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categoryThird').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categoryFourth').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categoryFifth').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categorySixth').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+      document.getElementById('categorySeventh').addEventListener('click', function() {
+        this.classList.toggle('isClicked')
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          document.getElementById('categoryFirst').classList.remove('isClicked');
+        }
+        filter ();
+      });
+
+
+      document.getElementById('categoryFirst').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categorySecond').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categoryThird').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categoryFourth').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categoryFifth').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categorySixth').onmousedown = function(event) {
+        event.preventDefault();
+      }
+      document.getElementById('categorySeventh').onmousedown = function(event) {
+        event.preventDefault();
+      }
+
+      document.querySelector(".pageNumber").onmousedown = function(event) {
+        event.preventDefault();
+      }
+
+
+
 
 
 
@@ -1342,6 +1538,7 @@
         var tabColor = [];
         var tabSize = [];
         var tabProducer = [];
+        var tabCategory = [];
         var minPrice = Number(document.getElementById('minPrice').innerHTML);
         var maxPrice = Number(document.getElementById("maxPrice").innerHTML);
 
@@ -1393,11 +1590,32 @@
           tabProducer.push("Menu");
         }
 
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          tabCategory.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
+        }
+        if (document.getElementById('categorySecond').classList.contains('isClicked')) {
+          tabCategory.push("Living");
+        }
+        if (document.getElementById('categoryThird').classList.contains('isClicked')) {
+          tabCategory.push("Dining");
+        }
+        if (document.getElementById('categoryFourth').classList.contains('isClicked')) {
+          tabCategory.push("Furniture");
+        }
+        if (document.getElementById('categoryFifth').classList.contains('isClicked')) {
+          tabCategory.push("Lighting");
+        }
+        if (document.getElementById('categorySixth').classList.contains('isClicked')) {
+          tabCategory.push("Technics");
+        }
+        if (document.getElementById('categorySeventh').classList.contains('isClicked')) {
+          tabCategory.push("Accessories");
+        }
 
         for (let i=0; i < json.length; i++) {
           let productPrice = Number(json[i].price.replace("$", ""));
           let color = json[i].color;
-if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0))) {
+          if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
             display.push(json[i]);
           }
         }
@@ -1419,14 +1637,23 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
           for (let i=1; i <= 17; i++) {
             document.getElementById('page' + i).style.display = "none";
           }
+          document.getElementById('pageArrowRight').style.display = "none";
         }
         else if (i <= howManyProductsPages) {
           document.getElementById('page' + i).style.display = "inline-block";
+          document.getElementById('pageArrowRight').style.display = "inline-block";
         }
         else {
           document.getElementById('page' + i).style.display = "none";
+          document.getElementById('pageArrowRight').style.display = "inline-block";
         }
       }
+      for (let i=2; i <= howManyProductsPages; i++) {
+        document.getElementById('page' + i).style.opacity = "0.4";
+      }
+      document.getElementById('page1').style.opacity = "1";
+
+
 
 
 
@@ -1435,6 +1662,7 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
         var tabColor = [];
         var tabSize = [];
         var tabProducer = [];
+        var tabCategory = [];
         var minPrice = Number(document.getElementById('minPrice').innerHTML);
         var maxPrice = Number(document.getElementById("maxPrice").innerHTML);
 
@@ -1486,10 +1714,32 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
           tabProducer.push("Menu");
         }
 
+        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+          tabCategory.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
+        }
+        if (document.getElementById('categorySecond').classList.contains('isClicked')) {
+          tabCategory.push("Living");
+        }
+        if (document.getElementById('categoryThird').classList.contains('isClicked')) {
+          tabCategory.push("Dining");
+        }
+        if (document.getElementById('categoryFourth').classList.contains('isClicked')) {
+          tabCategory.push("Furniture");
+        }
+        if (document.getElementById('categoryFifth').classList.contains('isClicked')) {
+          tabCategory.push("Lighting");
+        }
+        if (document.getElementById('categorySixth').classList.contains('isClicked')) {
+          tabCategory.push("Technics");
+        }
+        if (document.getElementById('categorySeventh').classList.contains('isClicked')) {
+          tabCategory.push("Accessories");
+        }
+
         for (let i=0; i < json.length; i++) {
           let productPrice = Number(json[i].price.replace("$", ""));
           let color = json[i].color;
-if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0))) {
+          if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
             display.push(json[i]);
           }
         }
@@ -1504,6 +1754,10 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
         //console.log(howManyProductsPages + "--1fdasfasdfasdfsad");
         if (e.target && e.target.nodeName == "LI") {
           var page = e.toElement.dataset.pagenumber;
+          for (let i=0; i < howManyProductsPages; i++) {
+            document.getElementById('page' + (i + 1)).style.opacity = "0.4";
+          }
+          document.getElementById('page' + page).style.opacity = "1";
           //console.log(page + "--2");
           if (howManyProductsPages == page) {
             //console.log(page + "--3");
@@ -1524,6 +1778,20 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
               document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[i + 6*(page-1)].product + '</p><p class="product__price">' + display[i + 6*(page-1)].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
             }
           }
+
+          if (page != howManyProductsPages) {
+            document.getElementById('pageArrowRight').style.display = "inline-block";
+          }
+          else {
+            document.getElementById('pageArrowRight').style.display = "none";
+          }
+
+          if (page == 1) {
+            document.getElementById('pageArrowLeft').style.display = "none";
+          }
+          else {
+            document.getElementById('pageArrowLeft').style.display = "inline-block";
+          }
         }
       });
 
@@ -1536,22 +1804,104 @@ if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.include
           document.getElementById('product' + (i + 1)).style.display = "none";
         }
       }
+
+
+
+
+
+
+
+
+
+
+      document.getElementById('pageArrowRight').onclick = function() {
+        document.getElementById('pageArrowLeft').style.display = "inline-block";
+        var pageND = document.querySelectorAll('.as');
+        //console.log(pageND.length);
+        for (let i=0; i < howManyProductsPages; i++) {
+          if (pageND[i].style.opacity == 1) {
+            var highlightedPage = i + 1;
+          }
+        }
+
+        if (highlightedPage == (howManyProductsPages - 1)) {
+          document.getElementById('pageArrowRight').style.display = "none";
+        }
+
+        if (highlightedPage != howManyProductsPages) {
+          for (let i=0; i < 6; i++ ) {
+            if (display.length > (highlightedPage*6 + i)) {
+              document.getElementById('product' + (i + 1)).style.display = "list-item";
+              document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[highlightedPage*6 + i].product + '</p><p class="product__price">' + display[highlightedPage*6 + i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
+            }
+            else {
+              document.getElementById('product' + (i + 1)).style.display = "none";
+            }
+          }
+
+          for (let i=0; i < howManyProductsPages; i++) {
+            document.getElementById('page' + (i + 1)).style.opacity = "0.4";
+          }
+
+          document.getElementById('page' + (highlightedPage + 1)).style.opacity = "1";
+        }
+      }
+
+
+      document.getElementById('pageArrowLeft').onclick = function() {
+        document.getElementById('pageArrowRight').style.display = "inline-block";
+        var pageND = document.querySelectorAll('.as');
+        //console.log(pageND.length);
+        for (let i=0; i < howManyProductsPages; i++) {
+          if (pageND[i].style.opacity == 1) {
+            var highlightedPage = i + 1;
+          }
+        }
+
+        if (highlightedPage == 2) {
+          document.getElementById('pageArrowLeft').style.display = "none";
+        }
+
+        if (highlightedPage != 1) {
+          for (let i=0; i < 6; i++ ) {
+              document.getElementById('product' + (i + 1)).style.display = "list-item";
+              document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[(highlightedPage-2)*6 + i].product + '</p><p class="product__price">' + display[(highlightedPage-2)*6 + i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
+          }
+
+          for (let i=0; i < howManyProductsPages; i++) {
+            document.getElementById('page' + (i + 1)).style.opacity = "0.4";
+          }
+
+          document.getElementById('page' + (highlightedPage - 1)).style.opacity = "1";
+        }
+      }
+
+      document.getElementById('pageArrowLeft').style.display = "none";
+
     }
 
 
 
-      var displayempty = [];
 
 
 
-      for (let i=0; i < 6; i++ ) {
-        if (i < displayempty.length) {
-          document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + displayempty[i].product + '</p><p class="product__price">' + displayempty[i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
-        }
-        else {
-          document.getElementById('product' + (i + 1)).style.display = "none";
-        }
-      }
+
+
+
+
+    filter();
+      // var displayempty = [];
+      //
+      //
+      //
+      // for (let i=0; i < 6; i++ ) {
+      //   if (i < displayempty.length) {
+      //     document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + displayempty[i].product + '</p><p class="product__price">' + displayempty[i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
+      //   }
+      //   else {
+      //     document.getElementById('product' + (i + 1)).style.display = "none";
+      //   }
+      // }
 
 
 
