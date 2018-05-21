@@ -83,25 +83,26 @@
             <h2 class="categories__header">Categories</h2>
             <ul class="filters__ul categories__ul">
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categoryFirst" class="category filters__p">All categories<span class="quantity"></span></button>
+                <button type="button" id="categoryFirst" class="category filters__p">All categories<span id="categoryFirstQuantity" class="quantity"></span></button>
+
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categorySecond" class="category filters__p">Living<span class="quantity"></span></button>
+                <button type="button" id="categorySecond" class="category filters__p">Living<span id="categorySecondQuantity" class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categoryThird" class="category filters__p">Dining<span class="quantity"></span></button>
+                <button type="button" id="categoryThird" class="category filters__p">Dining<span id="categoryThirdQuantity" class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categoryFourth" class="category filters__p">Furniture<span class="quantity"></span></button>
+                <button type="button" id="categoryFourth" class="category filters__p">Furniture<span id="categoryFourthQuantity" class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categoryFifth" class="category filters__p">Lighting<span class="quantity"></span></button>
+                <button type="button" id="categoryFifth" class="category filters__p">Lighting<span id="categoryFifthQuantity" class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categorySixth" class="category filters__p">Technics<span class="quantity"></span></button>
+                <button type="button" id="categorySixth" class="category filters__p">Technics<span id="categorySixthQuantity" class="quantity"></span></button>
               </li>
               <li class="filters__li filters__li--categories">
-                <button type="button" id="categorySeventh" class="category filters__p">Accessories<span class="quantity"></span></button>
+                <button type="button" id="categorySeventh" class="category filters__p asasas">Accessories<span id="categorySeventhQuantity" class="quantity"></span></button>
               </li>
             </ul>
           </div>
@@ -159,13 +160,13 @@
               <h3 class="filters__header filters__header--2">Size</h3>
               <ul class="filters__ul size__ul">
                 <li class="filters__li filters__li--size">
-                  <button type="button" id="sizeSmall" class="size filters__p">Small<span class="quantity"></span></button>
+                  <button type="button" id="sizeSmall" class="size filters__p">Small<span id="sizeSmallQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--size">
-                  <button type="button" id="sizeMedium" class="size filters__p">Medium<span class="quantity"></span></button>
+                  <button type="button" id="sizeMedium" class="size filters__p">Medium<span id="sizeMediumQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--size">
-                  <button type="button" id="sizeLarge" class="size filters__p">Large<span class="quantity"></span></button>
+                  <button type="button" id="sizeLarge" class="size filters__p">Large<span id="sizeLargeQuantity" class="quantity"></span></button>
                 </li>
               </ul>
             </div>
@@ -173,25 +174,25 @@
               <h3 class="filters__header filters__header--2">Brands</h3>
               <ul class="filters__ul brands__ul">
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsFirst" class="brands filters__p">Banshu Hamono<span class="quantity"></span></button>
+                  <button type="button" id="brandsFirst" class="brands filters__p">Banshu Hamono<span id="brandsFirst" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsSecond" class="brands filters__p">Bower<span class="quantity"></span></button>
+                  <button type="button" id="brandsSecond" class="brands filters__p">Bower<span id="brandsSecondQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsThird" class="brands filters__p">Braun<span class="quantity"></span></button>
+                  <button type="button" id="brandsThird" class="brands filters__p">Braun<span id="brandsThirdQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsFourth" class="brands filters__p">Elevenplus<span class="quantity"></span></button>
+                  <button type="button" id="brandsFourth" class="brands filters__p">Elevenplus<span id="brandsFourthQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsFifth" class="brands filters__p">Field<span class="quantity"></span></button>
+                  <button type="button" id="brandsFifth" class="brands filters__p">Field<span id="brandsFifthQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsSixth" class="brands filters__p">Henry Wilson<span class="quantity"></span></button>
+                  <button type="button" id="brandsSixth" class="brands filters__p">Henry Wilson<span id="brandsSixthQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsSeventh" class="brands filters__p">Menu<span class="quantity"></span></button>
+                  <button type="button" id="brandsSeventh" class="brands filters__p">Menu<span id="brandsSeventhQuantity" class="quantity"></span></button>
                 </li>
               </ul>
             </div>
@@ -206,7 +207,15 @@
 
         <section class="products">
           <div class="products__top">
-            <h2 class="filters__header top__sort">Sort by: A-Z</h2>
+            <h2 class="filters__header top__sortHeader">Sort by: </h2>
+            <div id="topSortContener" class="top__sortContener">
+              <ul class="sortContener__ul">
+                <li class="sortContener__li">A-Z</li>
+                <li class="sortContener__li">Z-A</li>
+                <li class="sortContener__li">Price</li>
+                <li class="sortContener__li">Price</li>
+              </ul>
+            </div>
             <p class="top__showing filters__p">Showing 1 - 6 of <span class="howManyresults">24</span> results</p>
           </div>
           <ul class="products__list">
@@ -1254,7 +1263,7 @@
 
 
 
-
+      console.log("U mnie działa. Proszę wyłączyć i włączyć komputer.");
 
       // document.getElementById("minPrice").innerHTML = Math.round(40*20/27);
       // document.getElementById("maxPrice").innerHTML = Math.round(256*20/27);
@@ -1359,13 +1368,13 @@
         filter ();
       });
 
-      document.getElementById('sizeSmall').onmousedown = function(event) {
+      document.getElementById('sizeSmall').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('sizeMedium').onmousedown = function(event) {
+      document.getElementById('sizeMedium').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('sizeLarge').onmousedown = function(event) {
+      document.getElementById('sizeLarge').onmousedown = function() {
         event.preventDefault();
       }
 
@@ -1403,25 +1412,25 @@
 
 
 
-      document.getElementById('brandsFirst').onmousedown = function(event) {
+      document.getElementById('brandsFirst').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsSecond').onmousedown = function(event) {
+      document.getElementById('brandsSecond').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsThird').onmousedown = function(event) {
+      document.getElementById('brandsThird').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsFourth').onmousedown = function(event) {
+      document.getElementById('brandsFourth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsFifth').onmousedown = function(event) {
+      document.getElementById('brandsFifth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsSixth').onmousedown = function(event) {
+      document.getElementById('brandsSixth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('brandsSeventh').onmousedown = function(event) {
+      document.getElementById('brandsSeventh').onmousedown = function() {
         event.preventDefault();
       }
 
@@ -1490,29 +1499,29 @@
       });
 
 
-      document.getElementById('categoryFirst').onmousedown = function(event) {
+      document.getElementById('categoryFirst').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categorySecond').onmousedown = function(event) {
+      document.getElementById('categorySecond').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categoryThird').onmousedown = function(event) {
+      document.getElementById('categoryThird').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categoryFourth').onmousedown = function(event) {
+      document.getElementById('categoryFourth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categoryFifth').onmousedown = function(event) {
+      document.getElementById('categoryFifth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categorySixth').onmousedown = function(event) {
+      document.getElementById('categorySixth').onmousedown = function() {
         event.preventDefault();
       }
-      document.getElementById('categorySeventh').onmousedown = function(event) {
+      document.getElementById('categorySeventh').onmousedown = function() {
         event.preventDefault();
       }
 
-      document.querySelector(".pageNumber").onmousedown = function(event) {
+      document.querySelector(".pageNumber").onmousedown = function() {
         event.preventDefault();
       }
 
@@ -1620,7 +1629,89 @@
           }
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         console.log("Przefiltrowanych produktów: " + display.length);
+
+        var countIdArray = ["categorySecondQuantity", "categoryThirdQuantity", "categoryFourthQuantity", "categoryFifthQuantity", "categorySixthQuantity", "categorySeventhQuantity"];
+        var countTextArray = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"]
+
+        console.log(countIdArray.length);
+        var all = 0;
+
+        for (let i=0; i < countIdArray.length; i++) {
+          var count = 0;
+          for (let j=0; j < display.length; j++) {
+            if (display[j].category == countTextArray[i]) {
+              count++;
+            }
+          }
+          all = all + count;
+          document.getElementById(countIdArray[i]).innerHTML = count;
+          console.log(count);
+        }
+
+        document.getElementById('categoryFirstQuantity').innerHTML = all;
+
+
+
+
+        document.getElementById('topSortContener').addEventListener('click', function() {
+          this.classList.toggle('isActive');
+        })
+
+
+        document.getElementById('topSortContener').onmousedown = function() {
+          event.preventDefault();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1637,15 +1728,15 @@
           for (let i=1; i <= 17; i++) {
             document.getElementById('page' + i).style.display = "none";
           }
-          document.getElementById('pageArrowRight').style.display = "none";
+          document.getElementById('pageArrowRight').style.visibility = "hidden";
         }
         else if (i <= howManyProductsPages) {
           document.getElementById('page' + i).style.display = "inline-block";
-          document.getElementById('pageArrowRight').style.display = "inline-block";
+          document.getElementById('pageArrowRight').style.visibility = "visible";
         }
         else {
           document.getElementById('page' + i).style.display = "none";
-          document.getElementById('pageArrowRight').style.display = "inline-block";
+          document.getElementById('pageArrowRight').style.visibility = "visible";
         }
       }
       for (let i=2; i <= howManyProductsPages; i++) {
@@ -1780,17 +1871,17 @@
           }
 
           if (page != howManyProductsPages) {
-            document.getElementById('pageArrowRight').style.display = "inline-block";
+            document.getElementById('pageArrowRight').style.visibility = "visible";
           }
           else {
-            document.getElementById('pageArrowRight').style.display = "none";
+            document.getElementById('pageArrowRight').style.visibility = "hidden";
           }
 
           if (page == 1) {
-            document.getElementById('pageArrowLeft').style.display = "none";
+            document.getElementById('pageArrowLeft').style.visibility = "hidden";
           }
           else {
-            document.getElementById('pageArrowLeft').style.display = "inline-block";
+            document.getElementById('pageArrowLeft').style.visibility = "visible";
           }
         }
       });
@@ -1815,7 +1906,7 @@
 
 
       document.getElementById('pageArrowRight').onclick = function() {
-        document.getElementById('pageArrowLeft').style.display = "inline-block";
+        document.getElementById('pageArrowLeft').style.visibility = "visible";
         var pageND = document.querySelectorAll('.as');
         //console.log(pageND.length);
         for (let i=0; i < howManyProductsPages; i++) {
@@ -1825,7 +1916,7 @@
         }
 
         if (highlightedPage == (howManyProductsPages - 1)) {
-          document.getElementById('pageArrowRight').style.display = "none";
+          document.getElementById('pageArrowRight').style.visibility = "hidden";
         }
 
         if (highlightedPage != howManyProductsPages) {
@@ -1849,7 +1940,7 @@
 
 
       document.getElementById('pageArrowLeft').onclick = function() {
-        document.getElementById('pageArrowRight').style.display = "inline-block";
+        document.getElementById('pageArrowRight').style.visibility = "visible";
         var pageND = document.querySelectorAll('.as');
         //console.log(pageND.length);
         for (let i=0; i < howManyProductsPages; i++) {
@@ -1859,7 +1950,7 @@
         }
 
         if (highlightedPage == 2) {
-          document.getElementById('pageArrowLeft').style.display = "none";
+          document.getElementById('pageArrowLeft').style.visibility = "hidden";
         }
 
         if (highlightedPage != 1) {
@@ -1876,13 +1967,9 @@
         }
       }
 
-      document.getElementById('pageArrowLeft').style.display = "none";
+      document.getElementById('pageArrowLeft').style.visibility = "hidden";
 
     }
-
-
-
-
 
 
 
