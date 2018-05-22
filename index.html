@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Shop website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="css/style.css" />
 
 
@@ -174,7 +173,7 @@
               <h3 class="filters__header filters__header--2">Brands</h3>
               <ul class="filters__ul brands__ul">
                 <li class="filters__li filters__li--brands">
-                  <button type="button" id="brandsFirst" class="brands filters__p">Banshu Hamono<span id="brandsFirst" class="quantity"></span></button>
+                  <button type="button" id="brandsFirst" class="brands filters__p">Banshu Hamono<span id="brandsFirstQuantity" class="quantity"></span></button>
                 </li>
                 <li class="filters__li filters__li--brands">
                   <button type="button" id="brandsSecond" class="brands filters__p">Bower<span id="brandsSecondQuantity" class="quantity"></span></button>
@@ -210,13 +209,15 @@
             <h2 class="filters__header top__sortHeader">Sort by: </h2>
             <div id="topSortContener" class="top__sortContener">
               <ul class="sortContener__ul">
-                <li class="sortContener__li">A-Z</li>
-                <li class="sortContener__li">Z-A</li>
-                <li class="sortContener__li">Price</li>
-                <li class="sortContener__li">Price</li>
+                <li id="sortContener--zero" class="sortFirst sortContener__li"></li>
+                <li id="sortContener--first" class="sortHidden sortContener__li">A-Z</li>
+                <li id="sortContener--second" class="sortHidden sortContener__li">Z-A</li>
+                <li id="sortContener--third" class="sortHidden sortContener__li">Price asc</li>
+                <li id="sortContener--fourth" class="sortHidden sortContener__li">Price des</li>
               </ul>
             </div>
-            <p class="top__showing filters__p">Showing 1 - 6 of <span class="howManyresults">24</span> results</p>
+            <p id="topShowingWhichElementsOnPage" class="top__showing filters__p"></p>
+            <p id="howManyresults" class="top__showing filters__p"></p>
           </div>
           <ul class="products__list">
             <li id="product1" class="product">
@@ -294,6 +295,10 @@
         <button type="button" id="pageArrowRight" class="pageNumber__pageArrow pageNumber__pageArrow--right"></button>
       </div>
 
+      <!-- <div id="settings">
+        <input/><select></select><span>text</span>
+      </div> KLIKANIE POZA - ZAMYKANIE -->
+
     </section>
 
     <section class="test">
@@ -307,6 +312,21 @@
 
     <script>
 
+    // var settings = document.getElementById('settings');
+    //
+    // document.onclick = function(e){
+    //     var target = (e && e.target) || (event && event.srcElement);
+    //     var display = 'none';
+    //     while (target.parentNode) {
+    //       if (target == settings) {
+    //         display ='block';
+    //         break;
+    //       }
+    //       target = target.parentNode;
+    //     }
+    // settings.style.display = display;
+    // }
+    //KLIKANIE POZA - ZAMYKANIE
 
 
 
@@ -320,7 +340,7 @@
 
       const json = [
   {
-    "product":"fsdfasdfsadfnscof",
+    "product":"Fsdfasdfscof",
     "price":"$106.87",
     "category":"Living",
     "color":"grey",
@@ -349,7 +369,7 @@
   "category":"Lighting",
   "color":"red",
   "size":"Small",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Fixflex",
@@ -373,7 +393,7 @@
   "category":"Furniture",
   "color":"white",
   "size":"Medium",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Fixflex",
@@ -460,7 +480,7 @@
   "category":"Dining",
   "color":"grey",
   "size":"Small",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Hatity",
@@ -500,7 +520,7 @@
   "category":"Living",
   "color":"green",
   "size":"Large",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Kanlam",
@@ -723,7 +743,7 @@
   "category":"Living",
   "color":"grey",
   "size":"Small",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Toughjoyfax",
@@ -939,7 +959,7 @@
   "category":"Living",
   "color":"green",
   "size":"Small",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Viva",
@@ -947,7 +967,7 @@
   "category":"Living",
   "color":"grey",
   "size":"Small",
-  "producer":"Dodge"
+  "producer":"Banshu Hamono"
 },
 {
   "product":"Latlux",
@@ -1155,12 +1175,51 @@
 
 
 
+function compareName(sortA,sortB) {
+  if (sortA.product < sortB.product)
+    return -1;
+  if (sortA.product > sortB.product)
+    return 1;
+  return 0;
+}
+
+function comparePrice(sortA,sortB) {
+  if (sortA.price < sortB.price)
+    return -1;
+  if (sortA.price > sortB.price)
+    return 1;
+  return 0;
+}
 
 
 
 
+document.getElementById('topSortContener').onclick = function() {
+  this.classList.toggle('isActive');
+  document.getElementById('sortContener--first').onclick = function() {
+    document.getElementById('sortContener--zero').innerHTML = "A-Z";
+    filter();
+  }
+  document.getElementById('sortContener--second').onclick = function() {
+    document.getElementById('sortContener--zero').innerHTML = "Z-A";
+    filter();
+  }
+  document.getElementById('sortContener--third').onclick = function() {
+    document.getElementById('sortContener--zero').innerHTML = "Price asc";
+    filter();
+  }
+  document.getElementById('sortContener--fourth').onclick = function() {
+    document.getElementById('sortContener--zero').innerHTML = "Price des";
+    filter();
+  }
+}
 
 
+
+
+document.getElementById('topSortContener').onmousedown = function() {
+  event.preventDefault();
+}
 
 
 
@@ -1621,70 +1680,124 @@
           tabCategory.push("Accessories");
         }
 
+        var priceCount = 0;
+        var tabCount = [];
         for (let i=0; i < json.length; i++) {
           let productPrice = Number(json[i].price.replace("$", ""));
-          let color = json[i].color;
-          if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
-            display.push(json[i]);
+          if (((minPrice < productPrice) && (maxPrice > productPrice))) {
+            priceCount++;
+            tabCount.push(json[i]);
+            if (((minPrice < productPrice) && (maxPrice > productPrice)) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
+              display.push(json[i]);
+            }
           }
         }
 
+        document.getElementById('categoryFirstQuantity').innerHTML = priceCount;
 
 
 
+        var countIdArrayCategory = ["categorySecondQuantity", "categoryThirdQuantity", "categoryFourthQuantity", "categoryFifthQuantity", "categorySixthQuantity", "categorySeventhQuantity"];
+        var countContentArrayCategory = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        console.log("Przefiltrowanych produktów: " + display.length);
-
-        var countIdArray = ["categorySecondQuantity", "categoryThirdQuantity", "categoryFourthQuantity", "categoryFifthQuantity", "categorySixthQuantity", "categorySeventhQuantity"];
-        var countTextArray = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"]
-
-        console.log(countIdArray.length);
-        var all = 0;
-
-        for (let i=0; i < countIdArray.length; i++) {
+        for (let i=0; i < countIdArrayCategory.length; i++) {
           var count = 0;
-          for (let j=0; j < display.length; j++) {
-            if (display[j].category == countTextArray[i]) {
+          for (let j=0; j < tabCount.length; j++) {
+            if (tabCount[j].category == countContentArrayCategory[i]) {
               count++;
             }
           }
-          all = all + count;
-          document.getElementById(countIdArray[i]).innerHTML = count;
-          console.log(count);
+          document.getElementById(countIdArrayCategory[i]).innerHTML = count;
         }
 
-        document.getElementById('categoryFirstQuantity').innerHTML = all;
+
+        var countIdArraySize = ["sizeSmallQuantity", "sizeMediumQuantity", "sizeLargeQuantity"];
+        var countContentArraySize = ["Small", "Medium", "Large"];
+
+        for (let i=0; i < countIdArraySize.length; i++) {
+          var count = 0;
+          for (let j=0; j < tabCount.length; j++) {
+            if (tabCount[j].size == countContentArraySize[i]) {
+              count++;
+            }
+          }
+          document.getElementById(countIdArraySize[i]).innerHTML = count;
+        }
+
+
+        var countIdArrayBrands = ["brandsFirstQuantity", "brandsSecondQuantity", "brandsThirdQuantity", "brandsFourthQuantity", "brandsFifthQuantity", "brandsSixthQuantity", "brandsSeventhQuantity"];
+        var countContentArrayBrands = ["Banshu Hamono", "Bower", "Braun", "Elevenplus", "Field", "Henry Wilson", "Menu"];
+
+        for (let i=0; i < countIdArrayBrands.length; i++) {
+          var count = 0;
+          for (let j=0; j < tabCount.length; j++) {
+            if (tabCount[j].producer == countContentArrayBrands[i]) {
+              count++;
+            }
+          }
+          document.getElementById(countIdArrayBrands[i]).innerHTML = count;
+        }
 
 
 
 
-        document.getElementById('topSortContener').addEventListener('click', function() {
-          this.classList.toggle('isActive');
-        })
 
 
-        document.getElementById('topSortContener').onmousedown = function() {
-          event.preventDefault();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if ((document.getElementById('sortContener--zero').innerHTML == 'A-Z') || (document.getElementById('sortContener--zero').innerHTML == 'Z-A')) {
+          display.sort(compareName);
+          if (document.getElementById('sortContener--zero').innerHTML == 'Z-A') {
+            display.reverse();
+          }
+        }
+
+        if ((document.getElementById('sortContener--zero').innerHTML == 'Price asc') || (document.getElementById('sortContener--zero').innerHTML == 'Price des')) {
+          var NEWdisplay = [...display];
+          for (let i=0; i < NEWdisplay.length; i++) {
+            let gg = Number(NEWdisplay[i].price.replace("$", ""));
+            NEWdisplay[i].price = gg;
+          }
+          NEWdisplay.sort(comparePrice);
+          for (let i=0; i < display.length; i++) {
+            NEWdisplay[i].price = "$" + NEWdisplay[i].price;
+          }
+          display = [...NEWdisplay];
+          if (document.getElementById('sortContener--zero').innerHTML == 'Price des') {
+            display.reverse();
+          }
+        }
+
+
+
+        if (document.getElementById('sortContener--zero').innerHTML == "") {
+          document.getElementById('sortContener--zero').innerHTML = "A-Z";
         }
 
 
@@ -1722,6 +1835,9 @@
           var howManyProductsPages = Math.floor(display.length / 6) + 1;
         }
 
+        document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - 6 of";
+        document.getElementById('howManyresults').innerHTML = display.length + " results";
+
 
       for (let i=1; i <= 17; i++) {
         if (howManyProductsPages == 1) {
@@ -1743,6 +1859,8 @@
         document.getElementById('page' + i).style.opacity = "0.4";
       }
       document.getElementById('page1').style.opacity = "1";
+
+
 
 
 
@@ -1834,6 +1952,34 @@
             display.push(json[i]);
           }
         }
+
+
+
+        if ((document.getElementById('sortContener--zero').innerHTML == 'A-Z') || (document.getElementById('sortContener--zero').innerHTML == 'Z-A')) {
+          display.sort(compareName);
+          if (document.getElementById('sortContener--zero').innerHTML == 'Z-A') {
+            display.reverse();
+          }
+        }
+
+        if ((document.getElementById('sortContener--zero').innerHTML == 'Price asc') || (document.getElementById('sortContener--zero').innerHTML == 'Price des')) {
+          var NEWdisplay = [...display];
+          for (let i=0; i < NEWdisplay.length; i++) {
+            let gg = Number(NEWdisplay[i].price.replace("$", ""));
+            NEWdisplay[i].price = gg;
+          }
+          NEWdisplay.sort(comparePrice);
+          for (let i=0; i < display.length; i++) {
+            NEWdisplay[i].price = "$" + NEWdisplay[i].price;
+          }
+          display = [...NEWdisplay];
+          if (document.getElementById('sortContener--zero').innerHTML == 'Price des') {
+            display.reverse();
+          }
+        }
+
+
+
         if ((display.length % 6) == 0) {
           var howManyProductsPages = Math.floor(display.length / 6);
           //console.log(howManyProductsPages + "jesli jest podzielne")
@@ -1883,6 +2029,22 @@
           else {
             document.getElementById('pageArrowLeft').style.visibility = "visible";
           }
+
+
+
+          document.getElementById('howManyresults').innerHTML = display.length + " results";
+          var onPageProductsFrom = (page - 1)*6 + 1;
+          if (page != howManyProductsPages) {
+            var onPageProductsTo = page*6;
+            var onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
+            document.getElementById('topShowingWhichElementsOnPage').innerHTML = onPageProductsText;
+          }
+          else {
+            var onPageProductsTo = display.length;
+            var onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
+            document.getElementById('topShowingWhichElementsOnPage').innerHTML = onPageProductsText;
+          }
+
         }
       });
 
@@ -1970,6 +2132,8 @@
       document.getElementById('pageArrowLeft').style.visibility = "hidden";
 
     }
+
+
 
 
 
