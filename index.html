@@ -24,7 +24,7 @@
 
     <section class="first-screen">
       <div id="slider" class="slider">
-        <header class="header">
+        <header class="header headerBig">
           <a href="#" class="header__logo"></a>
           <nav class="header__nav verticalAlign">
             <ul class="menu">
@@ -36,6 +36,28 @@
             </ul>
           </nav>
           <span class="cart"></span>
+        </header>
+        <header class="header headerSmall">
+          <input id="burger" type="checkbox" />
+
+          <label for="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+
+          <h1>MAISON</h1>
+
+          <span class="cart"><span class="cart__circle"><span id="cart__productQuantity" class="cart__productQuantity">2</span></span></span>
+
+
+          <nav>
+            <ul>
+              <li><a href="#">Link #1</a></li>
+              <li><a href="#">Link #2</a></li>
+              <li><a href="#">Link #3</a></li>
+            </ul>
+          </nav>
         </header>
         <ul id="slideWrap" class="slider__slideWrap">
 
@@ -70,6 +92,11 @@
         <div class="buttons">
           <button type="button" id="prev" class="prev" href="#"></button>
           <button type="button" id="next" class="next" href="#"></button>
+        </div>
+        <div class="buttonsResponsive">
+          <button type="button" id="firstResponsiveButton" class="sliderButtonResponsive" href="#"></button>
+          <button type="button" id="secondResponsiveButton" class="sliderButtonResponsive" href="#"></button>
+          <button type="button" id="thirdResponsiveButton" class="sliderButtonResponsive" href="#"></button>
         </div>
       </div>
     </section>
@@ -301,9 +328,53 @@
 
     </section>
 
-    <section class="test">
 
+
+
+    <section class="discount">
+      <div class="center">
+        <div class="verticalAlign">
+          <h1 class="discount__heading">Get Discount 35% off</h1>
+          <h1 class="subscribe__heading">Subscribe to our news</h1>
+          <form class="form" id="contactForm" method="post" novalidate action="send-script.php">
+            <input value="Enter your email..." type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+            <button type="submit" class="submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
     </section>
+
+
+
+    <footer class="footer">
+      <div class="center">
+        <div class="verticalAlign">
+          <div class="rightAndSocial">
+            <div class="verticalAlignResponsive">
+              <p class="footer__rights"><span class="copySign">&#169;</span>2017 Maison<span class="rights__all">. All rights reserved</span></p>
+              <ul class="footer__social__ul">
+                <li class="social__li"><a class="social__item social__item--facebook" href="#">Facebook</a></li>
+                <li class="social__li"><a class="social__item social__item--Twitter" href="#">Twitter</a></li>
+                <li class="social__li"><a class="social__item social__item--Instagram" href="#">Instagram</a></li>
+                <li class="social__li"><a class="social__item social__item--Youtube" href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <ul class="menu">
+              <li class="menu__item"><a href="#" class="item__text">Shop</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Journal</a></li>
+              <li class="menu__item"><a href="#" class="item__text">About Us</a></li>
+              <li class="menu__item"><a href="#" class="item__text">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+
+
+
 
 
 
@@ -311,6 +382,12 @@
 
 
     <script>
+
+
+
+
+
+
 
     // var settings = document.getElementById('settings');
     //
@@ -1249,6 +1326,11 @@ document.getElementById('topSortContener').onmousedown = function() {
         var items = slideList.querySelectorAll("li").length;
         var prev = document.getElementById("prev");
         var next = document.getElementById("next");
+        var firstResponsiveButton = document.getElementById("firstResponsiveButton");
+        var secondResponsiveButton = document.getElementById("secondResponsiveButton");
+        var thirdResponsiveButton = document.getElementById("thirdResponsiveButton");
+
+        firstResponsiveButton.style.background = "#e5e5e5";
 
         window.addEventListener('resize', function() {
           sliderWidth = slider.offsetWidth;
@@ -1268,6 +1350,19 @@ document.getElementById('topSortContener').onmousedown = function() {
         };
 
         var nextSlide = function() {
+          firstResponsiveButton.style.background = "#f5f5f5";
+          secondResponsiveButton.style.background = "#f5f5f5";
+          thirdResponsiveButton.style.background = "#f5f5f5";
+          console.log(count);
+          if (count == 3) {
+            firstResponsiveButton.style.background = "#e5e5e5";
+          }
+          if (count == 1) {
+            secondResponsiveButton.style.background = "#e5e5e5";
+          }
+          if (count == 2) {
+            thirdResponsiveButton.style.background = "#e5e5e5";
+          }
           if(count < items) {
             slideList.style.left = "-" + count * sliderWidth + "px";
             count++;
@@ -1286,9 +1381,33 @@ document.getElementById('topSortContener').onmousedown = function() {
           prevSlide();
         });
 
+        firstResponsiveButton.addEventListener("click", function() {
+          count = 0;
+          slideList.style.left = "-" + count * sliderWidth + "px";
+          secondResponsiveButton.style.background = "#f5f5f5";
+          thirdResponsiveButton.style.background = "#f5f5f5";
+          firstResponsiveButton.style.background = "#e5e5e5";
+        });
+
+        secondResponsiveButton.addEventListener("click", function() {
+          count = 1;
+          slideList.style.left = "-" + count * sliderWidth + "px";
+          firstResponsiveButton.style.background = "#f5f5f5";
+          thirdResponsiveButton.style.background = "#f5f5f5";
+          secondResponsiveButton.style.background = "#e5e5e5";
+        });
+
+        thirdResponsiveButton.addEventListener("click", function() {
+          count = 2;
+          slideList.style.left = "-" + count * sliderWidth + "px";
+          firstResponsiveButton.style.background = "#f5f5f5";
+          secondResponsiveButton.style.background = "#f5f5f5";
+          thirdResponsiveButton.style.background = "#e5e5e5";
+        });
+
         setInterval(function() {
           nextSlide()
-        }, 866000);
+        }, 800000);
 
       };
 
@@ -1837,6 +1956,9 @@ document.getElementById('topSortContener').onmousedown = function() {
 
         document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - 6 of";
         document.getElementById('howManyresults').innerHTML = display.length + " results";
+        if (howManyProductsPages == 1) {
+          document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - " + display.length +  " of ";
+        }
 
 
       for (let i=1; i <= 17; i++) {
@@ -2031,7 +2153,6 @@ document.getElementById('topSortContener').onmousedown = function() {
           }
 
 
-
           document.getElementById('howManyresults').innerHTML = display.length + " results";
           var onPageProductsFrom = (page - 1)*6 + 1;
           if (page != howManyProductsPages) {
@@ -2175,7 +2296,6 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
 
-//white, black, yellow, red, green
 
 
 </html>
