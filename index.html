@@ -106,8 +106,9 @@
       <div class="productSection__main">
         <section class="filters">
           <div class="filters__categories">
-            <h2 class="categories__header">Categories</h2>
-            <ul class="filters__ul categories__ul">
+            <h2 id="categoriesHeader" class="categories__header">Categories</h2>
+            <h2 id="filterHeader" class="categories__header">Filter</h2>
+            <ul id="categoriesUl" class="filters__ul categories__ul">
               <li class="filters__li filters__li--categories">
                 <button type="button" id="categoryFirst" class="category filters__p">All categories<span id="categoryFirstQuantity" class="quantity"></span></button>
 
@@ -132,8 +133,8 @@
               </li>
             </ul>
           </div>
-          <div class="filters__filters">
-            <h2 class="filters__header">Filter by</h2>
+          <div id="filtersFilters" class="filters__filters">
+            <h2 class="filters__header filters__header--filterBy">Filter by</h2>
             <div class="filters__price">
               <h3 class="filters__header filters__header--2">Price</h3>
               <div id="inputRange" class="inputRange">
@@ -196,6 +197,7 @@
                 </li>
               </ul>
             </div>
+            <p id="howManyProductsFound" class="filters__found"></p>
             <div class="filters__brands">
               <h3 class="filters__header filters__header--2">Brands</h3>
               <ul class="filters__ul brands__ul">
@@ -1956,6 +1958,7 @@ document.getElementById('topSortContener').onmousedown = function() {
 
         document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - 6 of";
         document.getElementById('howManyresults').innerHTML = display.length + " results";
+        document.getElementById('howManyProductsFound').innerHTML = display.length + " Products Found";
         if (howManyProductsPages == 1) {
           document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - " + display.length +  " of ";
         }
@@ -2154,6 +2157,7 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
           document.getElementById('howManyresults').innerHTML = display.length + " results";
+          document.getElementById('howManyProductsFound').innerHTML = display.length + " Products Found";
           var onPageProductsFrom = (page - 1)*6 + 1;
           if (page != howManyProductsPages) {
             var onPageProductsTo = page*6;
@@ -2275,6 +2279,23 @@ document.getElementById('topSortContener').onmousedown = function() {
       //   }
       // }
 
+
+
+
+      document.getElementById('categoriesHeader').onmousedown = function() {
+        event.preventDefault();
+      }
+      document.getElementById('filterHeader').onmousedown = function() {
+        event.preventDefault();
+      }
+
+      document.getElementById('categoriesHeader').addEventListener('click', function() {
+        document.getElementById('categoriesUl').classList.toggle('isClicked');
+      })
+
+      document.getElementById('filterHeader').addEventListener('click', function() {
+        document.getElementById('filtersFilters').classList.toggle('isClicked');
+      })
 
 
 
