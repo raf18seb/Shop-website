@@ -1227,32 +1227,29 @@
 
 
 
+console.log("U mnie działa. Jeśli u Ciebie nie, proszę wyłączyć i włączyć komputer.");
+console.log("Taki sucharek.");
 
 
+////////////////////////////////////////////////////////////////////////////////
+//preventDefault() on buttons we can click
+var preventDefaultTab = [document.getElementById("categoriesHeader"), document.getElementById("filterHeader"), document.getElementById("topSortContener"), document.getElementById("sizeSmall"), document.getElementById("sizeMedium"), document.getElementById("sizeLarge"), document.getElementById("categoryFirst"), document.getElementById("categorySecond"), document.getElementById("categoryThird"),
+document.getElementById("categoryFourth"), document.getElementById("categoryFifth"), document.getElementById("categorySixth"), document.getElementById("categorySeventh"), document.getElementById("brandsFirst"), document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"),
+document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.querySelector(".pageNumber")];
+
+for (let i=0; i < preventDefaultTab.length; i++) {
+  preventDefaultTab[i].onmousedown = function(event) {
+    event.preventDefault();
+  }
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////
+// sorting
+var currentSorting = document.getElementById('sortContener--zero');
+var sortContenerTab = [document.getElementById("sortContener--first"), document.getElementById("sortContener--second"), document.getElementById("sortContener--third"), document.getElementById("sortContener--fourth")];
+var sortContentTab = ["A-Z", "Z-A", "Price asc", "Price des"];
 
 function compareName(sortA,sortB) {
   if (sortA.product < sortB.product)
@@ -1270,243 +1267,176 @@ function comparePrice(sortA,sortB) {
   return 0;
 }
 
-
-
-
 document.getElementById('topSortContener').onclick = function() {
   this.classList.toggle('isActive');
-  document.getElementById('sortContener--first').onclick = function() {
-    document.getElementById('sortContener--zero').innerHTML = "A-Z";
-    filter();
-  }
-  document.getElementById('sortContener--second').onclick = function() {
-    document.getElementById('sortContener--zero').innerHTML = "Z-A";
-    filter();
-  }
-  document.getElementById('sortContener--third').onclick = function() {
-    document.getElementById('sortContener--zero').innerHTML = "Price asc";
-    filter();
-  }
-  document.getElementById('sortContener--fourth').onclick = function() {
-    document.getElementById('sortContener--zero').innerHTML = "Price des";
-    filter();
+  for (let i=0; i < sortContenerTab.length; i++) {
+    sortContenerTab[i].onclick = function() {
+      currentSorting.innerHTML = sortContentTab[i];
+      filter();
+    }
   }
 }
+////////////////////////////////////////////////////////////////////////////////
 
 
+////////////////////////////////////////////////////////////////////////////////
+//Slider
+let responsiveSlider = function() {
+
+  let slider = document.getElementById("slider");
+  let sliderWidth = slider.offsetWidth;
+  let slideList = document.getElementById("slideWrap");
+  let count = 1;
+  let items = slideList.querySelectorAll("li").length;
+  let prev = document.getElementById("prev");
+  let next = document.getElementById("next");
+  let firstResponsiveButton = document.getElementById("firstResponsiveButton");
+  let secondResponsiveButton = document.getElementById("secondResponsiveButton");
+  let thirdResponsiveButton = document.getElementById("thirdResponsiveButton");
+
+  firstResponsiveButton.style.background = "#e5e5e5";
+
+  window.addEventListener('resize', function() {
+    sliderWidth = slider.offsetWidth;
+  });
+
+  let prevSlide = function() {
+    if(count > 1) {
+      count = count - 2;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+    else if(count = 1) {
+      count = items - 1;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+  };
+
+  let nextSlide = function() {
+    firstResponsiveButton.style.background = "#f5f5f5";
+    secondResponsiveButton.style.background = "#f5f5f5";
+    thirdResponsiveButton.style.background = "#f5f5f5";
+    if (count == 3) {
+      firstResponsiveButton.style.background = "#e5e5e5";
+    }
+    if (count == 1) {
+      secondResponsiveButton.style.background = "#e5e5e5";
+    }
+    if (count == 2) {
+      thirdResponsiveButton.style.background = "#e5e5e5";
+    }
+    if(count < items) {
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+    else if(count = items) {
+      slideList.style.left = "0px";
+      count = 1;
+    }
+  };
+
+  next.addEventListener("click", function() {
+    nextSlide();
+  });
+
+  prev.addEventListener("click", function() {
+    prevSlide();
+  });
+
+  firstResponsiveButton.addEventListener("click", function() {
+    count = 0;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    secondResponsiveButton.style.background = "#f5f5f5";
+    thirdResponsiveButton.style.background = "#f5f5f5";
+    firstResponsiveButton.style.background = "#e5e5e5";
+  });
+
+  secondResponsiveButton.addEventListener("click", function() {
+    count = 1;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    firstResponsiveButton.style.background = "#f5f5f5";
+    thirdResponsiveButton.style.background = "#f5f5f5";
+    secondResponsiveButton.style.background = "#e5e5e5";
+  });
+
+  thirdResponsiveButton.addEventListener("click", function() {
+    count = 2;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    firstResponsiveButton.style.background = "#f5f5f5";
+    secondResponsiveButton.style.background = "#f5f5f5";
+    thirdResponsiveButton.style.background = "#e5e5e5";
+  });
+
+  setInterval(function() {
+    nextSlide()
+  }, 8000);
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
-document.getElementById('topSortContener').onmousedown = function() {
+////////////////////////////////////////////////////////////////////////////////
+//Price filter mouse drag.
+let inputLine = document.getElementById('inputLine');
+let inputCircleMin = document.getElementById('inputCircleMin');
+let inputCircleMax = document.getElementById('inputCircleMax');
+
+document.getElementById("minPrice").innerHTML = 0;
+document.getElementById("maxPrice").innerHTML = 200;
+
+//Click on circle MIN price starts this function
+inputCircleMin.onmousedown = function(event) {
   event.preventDefault();
+  let maxPrice = document.getElementById('maxPrice').innerHTML;
+  function onMouseMove(event) {
+    let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
+    if (distanceFromLeft < 0) {
+      distanceFromLeft = 0;
+    }
+    if (distanceFromLeft > maxPrice*27/20) {
+      distanceFromLeft = maxPrice*27/20;
+    }
+    inputCircleMin.style.left = distanceFromLeft + 'px';
+    let price = Math.round(distanceFromLeft * 20/27);
+    document.getElementById("minPrice").innerHTML = price;
+  }
+  function onMouseUp() {
+    document.removeEventListener('mouseup', onMouseUp);
+    document.removeEventListener('mousemove', onMouseMove);
+    filter();
+  }
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      var responsiveSlider = function() {
-
-        var slider = document.getElementById("slider");
-        var sliderWidth = slider.offsetWidth;
-        var slideList = document.getElementById("slideWrap");
-        var count = 1;
-        var items = slideList.querySelectorAll("li").length;
-        var prev = document.getElementById("prev");
-        var next = document.getElementById("next");
-        var firstResponsiveButton = document.getElementById("firstResponsiveButton");
-        var secondResponsiveButton = document.getElementById("secondResponsiveButton");
-        var thirdResponsiveButton = document.getElementById("thirdResponsiveButton");
-
-        firstResponsiveButton.style.background = "#e5e5e5";
-
-        window.addEventListener('resize', function() {
-          sliderWidth = slider.offsetWidth;
-        });
-
-        var prevSlide = function() {
-          if(count > 1) {
-            count = count - 2;
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-          }
-          else if(count = 1) {
-            count = items - 1;
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-          }
-        };
-
-        var nextSlide = function() {
-          firstResponsiveButton.style.background = "#f5f5f5";
-          secondResponsiveButton.style.background = "#f5f5f5";
-          thirdResponsiveButton.style.background = "#f5f5f5";
-          console.log(count);
-          if (count == 3) {
-            firstResponsiveButton.style.background = "#e5e5e5";
-          }
-          if (count == 1) {
-            secondResponsiveButton.style.background = "#e5e5e5";
-          }
-          if (count == 2) {
-            thirdResponsiveButton.style.background = "#e5e5e5";
-          }
-          if(count < items) {
-            slideList.style.left = "-" + count * sliderWidth + "px";
-            count++;
-          }
-          else if(count = items) {
-            slideList.style.left = "0px";
-            count = 1;
-          }
-        };
-
-        next.addEventListener("click", function() {
-          nextSlide();
-        });
-
-        prev.addEventListener("click", function() {
-          prevSlide();
-        });
-
-        firstResponsiveButton.addEventListener("click", function() {
-          count = 0;
-          slideList.style.left = "-" + count * sliderWidth + "px";
-          secondResponsiveButton.style.background = "#f5f5f5";
-          thirdResponsiveButton.style.background = "#f5f5f5";
-          firstResponsiveButton.style.background = "#e5e5e5";
-        });
-
-        secondResponsiveButton.addEventListener("click", function() {
-          count = 1;
-          slideList.style.left = "-" + count * sliderWidth + "px";
-          firstResponsiveButton.style.background = "#f5f5f5";
-          thirdResponsiveButton.style.background = "#f5f5f5";
-          secondResponsiveButton.style.background = "#e5e5e5";
-        });
-
-        thirdResponsiveButton.addEventListener("click", function() {
-          count = 2;
-          slideList.style.left = "-" + count * sliderWidth + "px";
-          firstResponsiveButton.style.background = "#f5f5f5";
-          secondResponsiveButton.style.background = "#f5f5f5";
-          thirdResponsiveButton.style.background = "#e5e5e5";
-        });
-
-        setInterval(function() {
-          nextSlide()
-        }, 800000);
-
-      };
-
-      window.onload = function() {
-        responsiveSlider();
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      console.log("U mnie działa. Proszę wyłączyć i włączyć komputer.");
-
-      // document.getElementById("minPrice").innerHTML = Math.round(40*20/27);
-      // document.getElementById("maxPrice").innerHTML = Math.round(256*20/27);
-      document.getElementById("minPrice").innerHTML = 0;
-      document.getElementById("maxPrice").innerHTML = 200;
-      let inputLine = document.getElementById('inputLine');
-      let inputCircleMin = document.getElementById('inputCircleMin');
-      let inputCircleMax = document.getElementById('inputCircleMax');
-
-      inputCircleMin.onmousedown = function(event) {
-        event.preventDefault(); // prevent selection
-        let maxPrice = document.getElementById('maxPrice').innerHTML;
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
-        function onMouseMove(event) {
-          let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
-          if (distanceFromLeft < 0) {
-            distanceFromLeft = 0;
-          }
-          if (distanceFromLeft > maxPrice*27/20) {
-            distanceFromLeft = maxPrice*27/20;
-          }
-          inputCircleMin.style.left = distanceFromLeft + 'px';
-          let price = Math.round(distanceFromLeft * 20/27);
-          document.getElementById("minPrice").innerHTML = price;
-        }
-
-        function onMouseUp() {
-          document.removeEventListener('mouseup', onMouseUp);
-          document.removeEventListener('mousemove', onMouseMove);
-          filter();
-        }
-
-      };
-
-      inputCircleMax.onmousedown = function(event) {
-        event.preventDefault(); // prevent selection
-        let minPrice = document.getElementById('minPrice').innerHTML;
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
-        function onMouseMove(event) {
-          let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
-          if (distanceFromLeft < minPrice*27/20) {
-            distanceFromLeft = minPrice*27/20;
-          }
-          //let rightEdge = inputLine.offsetWidth - inputCircleMax.offsetWidth;
-          if (distanceFromLeft > 270) {
-            distanceFromLeft = 270;
-          }
-          inputCircleMax.style.left = distanceFromLeft + 'px';
-          let price = Math.round(distanceFromLeft * 20/27);
-          document.getElementById("maxPrice").innerHTML = price;
-        }
-
-        function onMouseUp() {
-          document.removeEventListener('mouseup', onMouseUp);
-          document.removeEventListener('mousemove', onMouseMove);
-          filter();
-        }
-      };
-      // inputCircleMin.ondragstart = function() {
-      //   return false;
-      // };
+//Click on circle "MAX price" starts this function
+inputCircleMax.onmousedown = function(event) {
+  event.preventDefault();
+  let minPrice = document.getElementById('minPrice').innerHTML;
+  function onMouseMove(event) {
+    let distanceFromLeft = event.clientX - inputLine.getBoundingClientRect().left;
+    if (distanceFromLeft < minPrice*27/20) {
+      distanceFromLeft = minPrice*27/20;
+    }
+    if (distanceFromLeft > 270) {
+      distanceFromLeft = 270;
+    }
+    inputCircleMax.style.left = distanceFromLeft + 'px';
+    let price = Math.round(distanceFromLeft * 20/27);
+    document.getElementById("maxPrice").innerHTML = price;
+  }
+
+//When you release the "MIN price" or "MAX price" circle, products are being filtering according to chosen price
+function onMouseUp() {
+  document.removeEventListener('mouseup', onMouseUp);
+  document.removeEventListener('mousemove', onMouseMove);
+  filter();
+}
+
+document.addEventListener('mousemove', onMouseMove);
+document.addEventListener('mouseup', onMouseUp);
+};
+////////////////////////////////////////////////////////////////////////////////
 
 
       document.getElementById('colorCircleFirst').addEventListener('click', function() {
@@ -1548,15 +1478,7 @@ document.getElementById('topSortContener').onmousedown = function() {
         filter ();
       });
 
-      document.getElementById('sizeSmall').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('sizeMedium').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('sizeLarge').onmousedown = function() {
-        event.preventDefault();
-      }
+
 
 
 
@@ -1592,27 +1514,7 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
 
-      document.getElementById('brandsFirst').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsSecond').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsThird').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsFourth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsFifth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsSixth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('brandsSeventh').onmousedown = function() {
-        event.preventDefault();
-      }
+
 
 
       document.getElementById('categoryFirst').addEventListener('click', function() {
@@ -1679,31 +1581,7 @@ document.getElementById('topSortContener').onmousedown = function() {
       });
 
 
-      document.getElementById('categoryFirst').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categorySecond').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categoryThird').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categoryFourth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categoryFifth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categorySixth').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('categorySeventh').onmousedown = function() {
-        event.preventDefault();
-      }
 
-      document.querySelector(".pageNumber").onmousedown = function() {
-        event.preventDefault();
-      }
 
 
 
@@ -1991,7 +1869,7 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
 
-      document.querySelector(".pageNumber__ul").addEventListener('click', function(e) {
+      document.querySelector(".pageNumber__ul").addEventListener('click', function(event) {
         var display = [];
         var tabColor = [];
         var tabSize = [];
@@ -2114,8 +1992,9 @@ document.getElementById('topSortContener').onmousedown = function() {
           //console.log(howManyProductsPages + "jesli jest wiecej produktow")
         }
         //console.log(howManyProductsPages + "--1fdasfasdfasdfsad");
-        if (e.target && e.target.nodeName == "LI") {
-          var page = e.toElement.dataset.pagenumber;
+        if (event.target && event.target.nodeName == "LI") {
+          //var page = e.toElement.dataset.pagenumber;
+          var page = event.target.dataset.pagenumber;
           for (let i=0; i < howManyProductsPages; i++) {
             document.getElementById('page' + (i + 1)).style.opacity = "0.4";
           }
@@ -2262,10 +2141,13 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
 
+    window.onload = function() {
+      responsiveSlider();
+      filter();
+    }
 
 
 
-    filter();
       // var displayempty = [];
       //
       //
@@ -2282,12 +2164,7 @@ document.getElementById('topSortContener').onmousedown = function() {
 
 
 
-      document.getElementById('categoriesHeader').onmousedown = function() {
-        event.preventDefault();
-      }
-      document.getElementById('filterHeader').onmousedown = function() {
-        event.preventDefault();
-      }
+
 
       document.getElementById('categoriesHeader').addEventListener('click', function() {
         document.getElementById('categoriesUl').classList.toggle('isClicked');
