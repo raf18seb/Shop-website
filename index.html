@@ -1226,14 +1226,13 @@
 
 
 
-
 console.log("U mnie działa. Jeśli u Ciebie nie, proszę wyłączyć i włączyć komputer.");
 console.log("Taki sucharek.");
 
 
 ////////////////////////////////////////////////////////////////////////////////
 //preventDefault() on buttons we can click
-var preventDefaultTab = [document.getElementById("categoriesHeader"), document.getElementById("filterHeader"), document.getElementById("topSortContener"), document.getElementById("sizeSmall"), document.getElementById("sizeMedium"), document.getElementById("sizeLarge"), document.getElementById("categoryFirst"), document.getElementById("categorySecond"), document.getElementById("categoryThird"),
+let preventDefaultTab = [document.getElementById("categoriesHeader"), document.getElementById("filterHeader"), document.getElementById("topSortContener"), document.getElementById("sizeSmall"), document.getElementById("sizeMedium"), document.getElementById("sizeLarge"), document.getElementById("categoryFirst"), document.getElementById("categorySecond"), document.getElementById("categoryThird"),
 document.getElementById("categoryFourth"), document.getElementById("categoryFifth"), document.getElementById("categorySixth"), document.getElementById("categorySeventh"), document.getElementById("brandsFirst"), document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"),
 document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.querySelector(".pageNumber")];
 
@@ -1247,9 +1246,9 @@ for (let i=0; i < preventDefaultTab.length; i++) {
 
 ////////////////////////////////////////////////////////////////////////////////
 // sorting
-var currentSorting = document.getElementById('sortContener--zero');
-var sortContenerTab = [document.getElementById("sortContener--first"), document.getElementById("sortContener--second"), document.getElementById("sortContener--third"), document.getElementById("sortContener--fourth")];
-var sortContentTab = ["A-Z", "Z-A", "Price asc", "Price des"];
+let currentSorting = document.getElementById('sortContener--zero');
+let sortContenerTab = [document.getElementById("sortContener--first"), document.getElementById("sortContener--second"), document.getElementById("sortContener--third"), document.getElementById("sortContener--fourth")];
+let sortContentTab = ["A-Z", "Z-A", "Price asc", "Price des"];
 
 function compareName(sortA,sortB) {
   if (sortA.product < sortB.product)
@@ -1439,160 +1438,84 @@ document.addEventListener('mouseup', onMouseUp);
 ////////////////////////////////////////////////////////////////////////////////
 
 
-      document.getElementById('colorCircleFirst').addEventListener('click', function() {
-        document.getElementById('acceptedArrowFirst').classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('colorCircleSecond').addEventListener('click', function() {
-        document.getElementById('acceptedArrowSecond').classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('colorCircleThird').addEventListener('click', function() {
-        document.getElementById('acceptedArrowThird').classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('colorCircleFourth').addEventListener('click', function() {
-        document.getElementById('acceptedArrowFourth').classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('colorCircleFifth').addEventListener('click', function() {
-        document.getElementById('acceptedArrowFifth').classList.toggle('isClicked')
-        filter ();
-      });
+
+
+let tabToggleIsClickedWhatYouClick = [document.getElementById("colorCircleFirst"), document.getElementById("colorCircleSecond"), document.getElementById("colorCircleThird"), document.getElementById("colorCircleFourth"), document.getElementById("colorCircleFifth"), document.getElementById("sizeSmall"), document.getElementById("sizeMedium"), document.getElementById("sizeLarge"), document.getElementById("brandsFirst"),
+document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"), document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.getElementById("categoriesHeader"), document.getElementById("filterHeader")];
+let tabToggleIsClickedWhereToPutClass = [document.getElementById("acceptedArrowFirst"), document.getElementById("acceptedArrowSecond"), document.getElementById("acceptedArrowThird"), document.getElementById("acceptedArrowFourth"), document.getElementById("acceptedArrowFifth"), document.getElementById("sizeSmall"), document.getElementById("sizeMedium"), document.getElementById("sizeLarge"), document.getElementById("brandsFirst"),
+document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"), document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.getElementById("categoriesUl"), document.getElementById("filtersFilters")];
+
+for (let i=0; i < tabToggleIsClickedWhatYouClick.length; i++) {
+  tabToggleIsClickedWhatYouClick[i].addEventListener("click", function() {
+    tabToggleIsClickedWhereToPutClass[i].classList.toggle("isClicked");
+    filter();
+  });
+}
 
 
 
-
-
-
-      document.getElementById('sizeSmall').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('sizeMedium').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('sizeLarge').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-
-
-
-
-
-
-      document.getElementById('brandsFirst').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsSecond').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsThird').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsFourth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsFifth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsSixth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-      document.getElementById('brandsSeventh').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        filter ();
-      });
-
-
-
-
-
-
-      document.getElementById('categoryFirst').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (this.classList.contains('isClicked')) {
-          document.getElementById('categorySecond').classList.add('isClicked');
-          document.getElementById('categoryThird').classList.add('isClicked');
-          document.getElementById('categoryFourth').classList.add('isClicked');
-          document.getElementById('categoryFifth').classList.add('isClicked');
-          document.getElementById('categorySixth').classList.add('isClicked');
-          document.getElementById('categorySeventh').classList.add('isClicked');
-        }
-        else {
-          document.getElementById('categorySecond').classList.remove('isClicked');
-          document.getElementById('categoryThird').classList.remove('isClicked');
-          document.getElementById('categoryFourth').classList.remove('isClicked');
-          document.getElementById('categoryFifth').classList.remove('isClicked');
-          document.getElementById('categorySixth').classList.remove('isClicked');
-          document.getElementById('categorySeventh').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categorySecond').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categoryThird').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categoryFourth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categoryFifth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categorySixth').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-      document.getElementById('categorySeventh').addEventListener('click', function() {
-        this.classList.toggle('isClicked')
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          document.getElementById('categoryFirst').classList.remove('isClicked');
-        }
-        filter ();
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById('categoryFirst').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (this.classList.contains('isClicked')) {
+    document.getElementById('categorySecond').classList.add('isClicked');
+    document.getElementById('categoryThird').classList.add('isClicked');
+    document.getElementById('categoryFourth').classList.add('isClicked');
+    document.getElementById('categoryFifth').classList.add('isClicked');
+    document.getElementById('categorySixth').classList.add('isClicked');
+    document.getElementById('categorySeventh').classList.add('isClicked');
+  }
+  else {
+    document.getElementById('categorySecond').classList.remove('isClicked');
+    document.getElementById('categoryThird').classList.remove('isClicked');
+    document.getElementById('categoryFourth').classList.remove('isClicked');
+    document.getElementById('categoryFifth').classList.remove('isClicked');
+    document.getElementById('categorySixth').classList.remove('isClicked');
+    document.getElementById('categorySeventh').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categorySecond').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categoryThird').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categoryFourth').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categoryFifth').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categorySixth').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
+document.getElementById('categorySeventh').addEventListener('click', function() {
+  this.classList.toggle('isClicked')
+  if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
+    document.getElementById('categoryFirst').classList.remove('isClicked');
+  }
+  filter ();
+});
 
 
 
@@ -1601,187 +1524,122 @@ document.addEventListener('mouseup', onMouseUp);
 
 
       function filter() {
-        var display = [];
-        var tabColor = [];
-        var tabSize = [];
-        var tabProducer = [];
-        var tabCategory = [];
-        var minPrice = Number(document.getElementById('minPrice').innerHTML);
-        var maxPrice = Number(document.getElementById("maxPrice").innerHTML);
+        let display = [];
+        let tabChosenColors = [];
+        let arrayChosenSizes = [];
+        let arrayChosenProducers = [];
+        let arrayChosenCategories = [];
+        let minPrice = Number(document.getElementById('minPrice').innerHTML);
+        let maxPrice = Number(document.getElementById("maxPrice").innerHTML);
+        let priceCount = 0;
+        let tabCount = [];
+        let color = ["grey", "white", "red", "blue", "green"];
+        let sizes = ["Small", "Medium", "Large"];
+        let brands = ["Banshu Hamono", "Bower", "Braun", "Elevenplus", "Field", "Henry Wilson", "Menu"];
+        let category = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"];
+        let countIdArrayCategory = ["categorySecondQuantity", "categoryThirdQuantity", "categoryFourthQuantity", "categoryFifthQuantity", "categorySixthQuantity", "categorySeventhQuantity"];
+        let countIdArraySize = ["sizeSmallQuantity", "sizeMediumQuantity", "sizeLargeQuantity"];
+        let countIdArrayBrands = ["brandsFirstQuantity", "brandsSecondQuantity", "brandsThirdQuantity", "brandsFourthQuantity", "brandsFifthQuantity", "brandsSixthQuantity", "brandsSeventhQuantity"];
+        let zaraztonazwe = [document.getElementById("acceptedArrowFirst"), document.getElementById('acceptedArrowSecond'), document.getElementById('acceptedArrowThird'), document.getElementById('acceptedArrowFourth'), document.getElementById('acceptedArrowFifth'), document.getElementById('sizeSmall'), document.getElementById('sizeMedium'), document.getElementById('sizeLarge'), document.getElementById("brandsFirst"),
+        document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"), document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.getElementById("categorySecond"), document.getElementById("categoryThird"), document.getElementById("categoryFourth"), document.getElementById("categoryFifth"),
+        document.getElementById("categorySixth"), document.getElementById("categorySeventh")];
 
-        if (document.getElementById('acceptedArrowFirst').classList.contains('isClicked')) {
-          tabColor.push("grey");
+        ////////////////////////////////////////////////////////////////////////
+        //When you pick (click on) category or color or size etc. - these products are being added to displaying array
+        for (let i=0; i < zaraztonazwe.length; i++) {
+          if (i < color.length) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              tabChosenColors.push(color[i]);
+            }
+          }
+          else if (i < (color.length + sizes.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenSizes.push(sizes[i - color.length]);
+            }
+          }
+          else if (i < (color.length + sizes.length + brands.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenProducers.push(brands[i - color.length - sizes.length]);
+            }
+          }
+          else if (i < (color.length + sizes.length + brands.length + category.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenCategories.push(category[i - color.length - sizes.length - brands.length]);
+            }
+          }
         }
-        if (document.getElementById('acceptedArrowSecond').classList.contains('isClicked')) {
-          tabColor.push("white");
-        }
-        if (document.getElementById('acceptedArrowThird').classList.contains('isClicked')) {
-          tabColor.push("red");
-        }
-        if (document.getElementById('acceptedArrowFourth').classList.contains('isClicked')) {
-          tabColor.push("blue");
-        }
-        if (document.getElementById('acceptedArrowFifth').classList.contains('isClicked')) {
-          tabColor.push("green");
-        }
-
-        if (document.getElementById('sizeSmall').classList.contains('isClicked')) {
-          tabSize.push("Small");
-        }
-        if (document.getElementById('sizeMedium').classList.contains('isClicked')) {
-          tabSize.push("Medium");
-        }
-        if (document.getElementById('sizeLarge').classList.contains('isClicked')) {
-          tabSize.push("Large");
-        }
-
-        if (document.getElementById('brandsFirst').classList.contains('isClicked')) {
-          tabProducer.push("Banshu Hamono");
-        }
-        if (document.getElementById('brandsSecond').classList.contains('isClicked')) {
-          tabProducer.push("Bower");
-        }
-        if (document.getElementById('brandsThird').classList.contains('isClicked')) {
-          tabProducer.push("Braun");
-        }
-        if (document.getElementById('brandsFourth').classList.contains('isClicked')) {
-          tabProducer.push("Elevenplus");
-        }
-        if (document.getElementById('brandsFifth').classList.contains('isClicked')) {
-          tabProducer.push("Field");
-        }
-        if (document.getElementById('brandsSixth').classList.contains('isClicked')) {
-          tabProducer.push("Henry Wilson");
-        }
-        if (document.getElementById('brandsSeventh').classList.contains('isClicked')) {
-          tabProducer.push("Menu");
+        if (document.getElementById("categoryFirst").classList.contains("isClicked")) {
+          arrayChosenCategories.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
         }
 
-        if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          tabCategory.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
-        }
-        if (document.getElementById('categorySecond').classList.contains('isClicked')) {
-          tabCategory.push("Living");
-        }
-        if (document.getElementById('categoryThird').classList.contains('isClicked')) {
-          tabCategory.push("Dining");
-        }
-        if (document.getElementById('categoryFourth').classList.contains('isClicked')) {
-          tabCategory.push("Furniture");
-        }
-        if (document.getElementById('categoryFifth').classList.contains('isClicked')) {
-          tabCategory.push("Lighting");
-        }
-        if (document.getElementById('categorySixth').classList.contains('isClicked')) {
-          tabCategory.push("Technics");
-        }
-        if (document.getElementById('categorySeventh').classList.contains('isClicked')) {
-          tabCategory.push("Accessories");
-        }
-
-        var priceCount = 0;
-        var tabCount = [];
         for (let i=0; i < json.length; i++) {
           let productPrice = Number(json[i].price.replace("$", ""));
           if (((minPrice < productPrice) && (maxPrice > productPrice))) {
             priceCount++;
             tabCount.push(json[i]);
-            if (((minPrice < productPrice) && (maxPrice > productPrice)) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
+            if (((minPrice < productPrice) && (maxPrice > productPrice)) && ((tabChosenColors.includes(json[i].color)) || (tabChosenColors.length == 0)) && ((arrayChosenSizes.includes(json[i].size)) || (arrayChosenSizes.length == 0)) && ((arrayChosenProducers.includes(json[i].producer)) || (arrayChosenProducers.length == 0)) && ((arrayChosenCategories.includes(json[i].category)) || (arrayChosenCategories.length == 0))) {
               display.push(json[i]);
             }
           }
         }
 
-        document.getElementById('categoryFirstQuantity').innerHTML = priceCount;
+        document.getElementById("categoryFirstQuantity").innerHTML = priceCount;
+        ////////////////////////////////////////////////////////////////////////
 
 
-
-        var countIdArrayCategory = ["categorySecondQuantity", "categoryThirdQuantity", "categoryFourthQuantity", "categoryFifthQuantity", "categorySixthQuantity", "categorySeventhQuantity"];
-        var countContentArrayCategory = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"]
-
-
+        ////////////////////////////////////////////////////////////////////////
+        //Counting and displaying how many given category (or size etc) products are
         for (let i=0; i < countIdArrayCategory.length; i++) {
-          var count = 0;
+          let count = 0;
           for (let j=0; j < tabCount.length; j++) {
-            if (tabCount[j].category == countContentArrayCategory[i]) {
+            if (tabCount[j].category == category[i]) {
               count++;
             }
           }
           document.getElementById(countIdArrayCategory[i]).innerHTML = count;
         }
 
-
-        var countIdArraySize = ["sizeSmallQuantity", "sizeMediumQuantity", "sizeLargeQuantity"];
-        var countContentArraySize = ["Small", "Medium", "Large"];
-
         for (let i=0; i < countIdArraySize.length; i++) {
-          var count = 0;
+          let count = 0;
           for (let j=0; j < tabCount.length; j++) {
-            if (tabCount[j].size == countContentArraySize[i]) {
+            if (tabCount[j].size == sizes[i]) {
               count++;
             }
           }
           document.getElementById(countIdArraySize[i]).innerHTML = count;
         }
 
-
-        var countIdArrayBrands = ["brandsFirstQuantity", "brandsSecondQuantity", "brandsThirdQuantity", "brandsFourthQuantity", "brandsFifthQuantity", "brandsSixthQuantity", "brandsSeventhQuantity"];
-        var countContentArrayBrands = ["Banshu Hamono", "Bower", "Braun", "Elevenplus", "Field", "Henry Wilson", "Menu"];
-
         for (let i=0; i < countIdArrayBrands.length; i++) {
-          var count = 0;
+          let count = 0;
           for (let j=0; j < tabCount.length; j++) {
-            if (tabCount[j].producer == countContentArrayBrands[i]) {
+            if (tabCount[j].producer == brands[i]) {
               count++;
             }
           }
           document.getElementById(countIdArrayBrands[i]).innerHTML = count;
         }
+        ////////////////////////////////////////////////////////////////////////
 
 
+        //Default sorting
+        if (document.getElementById('sortContener--zero').innerHTML == "") {
+          document.getElementById('sortContener--zero').innerHTML = "A-Z";
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ////////////////////////////////////////////////////////////////////////
+        //Sorting products alphabethic
         if ((document.getElementById('sortContener--zero').innerHTML == 'A-Z') || (document.getElementById('sortContener--zero').innerHTML == 'Z-A')) {
           display.sort(compareName);
           if (document.getElementById('sortContener--zero').innerHTML == 'Z-A') {
             display.reverse();
           }
         }
-
+        //Sorting products by price
         if ((document.getElementById('sortContener--zero').innerHTML == 'Price asc') || (document.getElementById('sortContener--zero').innerHTML == 'Price des')) {
-          var NEWdisplay = [...display];
+          let NEWdisplay = [...display];
           for (let i=0; i < NEWdisplay.length; i++) {
-            let gg = Number(NEWdisplay[i].price.replace("$", ""));
-            NEWdisplay[i].price = gg;
+            let priceWithoutDolar = Number(NEWdisplay[i].price.replace("$", ""));
+            NEWdisplay[i].price = priceWithoutDolar;
           }
           NEWdisplay.sort(comparePrice);
           for (let i=0; i < display.length; i++) {
@@ -1792,41 +1650,11 @@ document.addEventListener('mouseup', onMouseUp);
             display.reverse();
           }
         }
+        ////////////////////////////////////////////////////////////////////////
 
 
-
-        if (document.getElementById('sortContener--zero').innerHTML == "") {
-          document.getElementById('sortContener--zero').innerHTML = "A-Z";
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ////////////////////////////////////////////////////////////////////////
+        //Some info on the page
         if ((display.length % 6) == 0) {
           var howManyProductsPages = Math.floor(display.length / 6);
         }
@@ -1840,28 +1668,32 @@ document.addEventListener('mouseup', onMouseUp);
         if (howManyProductsPages == 1) {
           document.getElementById('topShowingWhichElementsOnPage').innerHTML = "Showing 1 - " + display.length +  " of ";
         }
+        if (howManyProductsPages == 0) {
+          document.getElementById('topShowingWhichElementsOnPage').innerHTML = "";
+        }
 
-
-      for (let i=1; i <= 17; i++) {
-        if (howManyProductsPages == 1) {
-          for (let i=1; i <= 17; i++) {
-            document.getElementById('page' + i).style.display = "none";
+        //Showing and hiding arrows and page numbers
+        for (let i=1; i <= 17; i++) {
+          if ((howManyProductsPages == 1) || (howManyProductsPages == 0)) {
+            for (let i=1; i <= 17; i++) {
+              document.getElementById('page' + i).style.display = "none";
+            }
+            document.getElementById('pageArrowRight').style.visibility = "hidden";
           }
-          document.getElementById('pageArrowRight').style.visibility = "hidden";
+          else if (i <= howManyProductsPages) {
+            document.getElementById('page' + i).style.display = "inline-block";
+            document.getElementById('pageArrowRight').style.visibility = "visible";
+          }
+          else {
+            document.getElementById('page' + i).style.display = "none";
+            document.getElementById('pageArrowRight').style.visibility = "visible";
+          }
         }
-        else if (i <= howManyProductsPages) {
-          document.getElementById('page' + i).style.display = "inline-block";
-          document.getElementById('pageArrowRight').style.visibility = "visible";
+        for (let i=2; i <= howManyProductsPages; i++) {
+          document.getElementById('page' + i).style.opacity = "0.4";
         }
-        else {
-          document.getElementById('page' + i).style.display = "none";
-          document.getElementById('pageArrowRight').style.visibility = "visible";
-        }
-      }
-      for (let i=2; i <= howManyProductsPages; i++) {
-        document.getElementById('page' + i).style.opacity = "0.4";
-      }
-      document.getElementById('page1').style.opacity = "1";
+        document.getElementById('page1').style.opacity = "1";
+        ////////////////////////////////////////////////////////////////////////
 
 
 
@@ -1870,106 +1702,75 @@ document.addEventListener('mouseup', onMouseUp);
 
 
       document.querySelector(".pageNumber__ul").addEventListener('click', function(event) {
-        var display = [];
-        var tabColor = [];
-        var tabSize = [];
-        var tabProducer = [];
-        var tabCategory = [];
-        var minPrice = Number(document.getElementById('minPrice').innerHTML);
-        var maxPrice = Number(document.getElementById("maxPrice").innerHTML);
+        let display = [];
+        let tabChosenColors = [];
+        let arrayChosenSizes = [];
+        let arrayChosenProducers = [];
+        let arrayChosenCategories = [];
+        let minPrice = Number(document.getElementById('minPrice').innerHTML);
+        let maxPrice = Number(document.getElementById("maxPrice").innerHTML);
+        let color = ["grey", "white", "red", "blue", "green"];
+        let sizes = ["Small", "Medium", "Large"];
+        let brands = ["Banshu Hamono", "Bower", "Braun", "Elevenplus", "Field", "Henry Wilson", "Menu"];
+        let category = ["Living", "Dining", "Furniture", "Lighting", "Technics", "Accessories"];
+        let zaraztonazwe = [document.getElementById("acceptedArrowFirst"), document.getElementById('acceptedArrowSecond'), document.getElementById('acceptedArrowThird'), document.getElementById('acceptedArrowFourth'), document.getElementById('acceptedArrowFifth'), document.getElementById('sizeSmall'), document.getElementById('sizeMedium'), document.getElementById('sizeLarge'), document.getElementById("brandsFirst"),
+        document.getElementById("brandsSecond"), document.getElementById("brandsThird"), document.getElementById("brandsFourth"), document.getElementById("brandsFifth"), document.getElementById("brandsSixth"), document.getElementById("brandsSeventh"), document.getElementById("categorySecond"), document.getElementById("categoryThird"), document.getElementById("categoryFourth"), document.getElementById("categoryFifth"),
+        document.getElementById("categorySixth"), document.getElementById("categorySeventh")];
 
-        if (document.getElementById('acceptedArrowFirst').classList.contains('isClicked')) {
-          tabColor.push("grey");
-        }
-        if (document.getElementById('acceptedArrowSecond').classList.contains('isClicked')) {
-          tabColor.push("white");
-        }
-        if (document.getElementById('acceptedArrowThird').classList.contains('isClicked')) {
-          tabColor.push("red");
-        }
-        if (document.getElementById('acceptedArrowFourth').classList.contains('isClicked')) {
-          tabColor.push("blue");
-        }
-        if (document.getElementById('acceptedArrowFifth').classList.contains('isClicked')) {
-          tabColor.push("green");
-        }
 
-        if (document.getElementById('sizeSmall').classList.contains('isClicked')) {
-          tabSize.push("Small");
-        }
-        if (document.getElementById('sizeMedium').classList.contains('isClicked')) {
-          tabSize.push("Medium");
-        }
-        if (document.getElementById('sizeLarge').classList.contains('isClicked')) {
-          tabSize.push("Large");
-        }
-
-        if (document.getElementById('brandsFirst').classList.contains('isClicked')) {
-          tabProducer.push("Banshu Hamono");
-        }
-        if (document.getElementById('brandsSecond').classList.contains('isClicked')) {
-          tabProducer.push("Bower");
-        }
-        if (document.getElementById('brandsThird').classList.contains('isClicked')) {
-          tabProducer.push("Braun");
-        }
-        if (document.getElementById('brandsFourth').classList.contains('isClicked')) {
-          tabProducer.push("Elevenplus");
-        }
-        if (document.getElementById('brandsFifth').classList.contains('isClicked')) {
-          tabProducer.push("Field");
-        }
-        if (document.getElementById('brandsSixth').classList.contains('isClicked')) {
-          tabProducer.push("Henry Wilson");
-        }
-        if (document.getElementById('brandsSeventh').classList.contains('isClicked')) {
-          tabProducer.push("Menu");
+        ////////////////////////////////////////////////////////////////////////
+        //When you pick (click on) category or color or size etc. - these products are being added to displaying array
+        for (let i=0; i < zaraztonazwe.length; i++) {
+          if (i < color.length) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              tabChosenColors.push(color[i]);
+            }
+          }
+          else if (i < (color.length + sizes.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenSizes.push(sizes[i - color.length]);
+            }
+          }
+          else if (i < (color.length + sizes.length + brands.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenProducers.push(brands[i - color.length - sizes.length]);
+            }
+          }
+          else if (i < (color.length + sizes.length + brands.length + category.length)) {
+            if (zaraztonazwe[i].classList.contains("isClicked")) {
+              arrayChosenCategories.push(category[i - color.length - sizes.length - brands.length]);
+            }
+          }
         }
 
         if (document.getElementById('categoryFirst').classList.contains('isClicked')) {
-          tabCategory.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
-        }
-        if (document.getElementById('categorySecond').classList.contains('isClicked')) {
-          tabCategory.push("Living");
-        }
-        if (document.getElementById('categoryThird').classList.contains('isClicked')) {
-          tabCategory.push("Dining");
-        }
-        if (document.getElementById('categoryFourth').classList.contains('isClicked')) {
-          tabCategory.push("Furniture");
-        }
-        if (document.getElementById('categoryFifth').classList.contains('isClicked')) {
-          tabCategory.push("Lighting");
-        }
-        if (document.getElementById('categorySixth').classList.contains('isClicked')) {
-          tabCategory.push("Technics");
-        }
-        if (document.getElementById('categorySeventh').classList.contains('isClicked')) {
-          tabCategory.push("Accessories");
+          arrayChosenCategories.push("Living","Dining","Furniture","Lighting","Technics","Accessories");
         }
 
         for (let i=0; i < json.length; i++) {
           let productPrice = Number(json[i].price.replace("$", ""));
           let color = json[i].color;
-          if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabColor.includes(json[i].color)) || (tabColor.length == 0)) && ((tabSize.includes(json[i].size)) || (tabSize.length == 0)) && ((tabProducer.includes(json[i].producer)) || (tabProducer.length == 0)) && ((tabCategory.includes(json[i].category)) || (tabCategory.length == 0))) {
+          if ((minPrice < productPrice) && (maxPrice > productPrice) && ((tabChosenColors.includes(json[i].color)) || (tabChosenColors.length == 0)) && ((arrayChosenSizes.includes(json[i].size)) || (arrayChosenSizes.length == 0)) && ((arrayChosenProducers.includes(json[i].producer)) || (arrayChosenProducers.length == 0)) && ((arrayChosenCategories.includes(json[i].category)) || (arrayChosenCategories.length == 0))) {
             display.push(json[i]);
           }
         }
+        ////////////////////////////////////////////////////////////////////////
 
 
-
+        ////////////////////////////////////////////////////////////////////////
+        //Sorting products alphabethic
         if ((document.getElementById('sortContener--zero').innerHTML == 'A-Z') || (document.getElementById('sortContener--zero').innerHTML == 'Z-A')) {
           display.sort(compareName);
           if (document.getElementById('sortContener--zero').innerHTML == 'Z-A') {
             display.reverse();
           }
         }
-
+        //Sorting products by price
         if ((document.getElementById('sortContener--zero').innerHTML == 'Price asc') || (document.getElementById('sortContener--zero').innerHTML == 'Price des')) {
-          var NEWdisplay = [...display];
+          let NEWdisplay = [...display];
           for (let i=0; i < NEWdisplay.length; i++) {
-            let gg = Number(NEWdisplay[i].price.replace("$", ""));
-            NEWdisplay[i].price = gg;
+            let priceWithoutDolar = Number(NEWdisplay[i].price.replace("$", ""));
+            NEWdisplay[i].price = priceWithoutDolar;
           }
           NEWdisplay.sort(comparePrice);
           for (let i=0; i < display.length; i++) {
@@ -1980,28 +1781,24 @@ document.addEventListener('mouseup', onMouseUp);
             display.reverse();
           }
         }
-
+        ////////////////////////////////////////////////////////////////////////
 
 
         if ((display.length % 6) == 0) {
           var howManyProductsPages = Math.floor(display.length / 6);
-          //console.log(howManyProductsPages + "jesli jest podzielne")
         }
         else {
           var howManyProductsPages = Math.floor(display.length / 6) + 1;
-          //console.log(howManyProductsPages + "jesli jest wiecej produktow")
         }
-        //console.log(howManyProductsPages + "--1fdasfasdfasdfsad");
+
+
         if (event.target && event.target.nodeName == "LI") {
-          //var page = e.toElement.dataset.pagenumber;
           var page = event.target.dataset.pagenumber;
           for (let i=0; i < howManyProductsPages; i++) {
             document.getElementById('page' + (i + 1)).style.opacity = "0.4";
           }
           document.getElementById('page' + page).style.opacity = "1";
-          //console.log(page + "--2");
           if (howManyProductsPages == page) {
-            //console.log(page + "--3");
             for (let i=0; i < 6 ;i++) {
               if (i < (display.length - 6*(howManyProductsPages - 1))) {
                 document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[i + 6*(page-1)].product + '</p><p class="product__price">' + display[i + 6*(page-1)].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
@@ -2013,8 +1810,6 @@ document.addEventListener('mouseup', onMouseUp);
           }
           else {
             for (let i=0; i < 6; i++) {
-              //console.log(page + "--4");
-              //console.log(howManyProductsPages + "--5");
               document.getElementById('product' + (i + 1)).style.display = "list-item";
               document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + display[i + 6*(page-1)].product + '</p><p class="product__price">' + display[i + 6*(page-1)].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
             }
@@ -2037,21 +1832,29 @@ document.addEventListener('mouseup', onMouseUp);
 
           document.getElementById('howManyresults').innerHTML = display.length + " results";
           document.getElementById('howManyProductsFound').innerHTML = display.length + " Products Found";
-          var onPageProductsFrom = (page - 1)*6 + 1;
+          let onPageProductsFrom = (page - 1)*6 + 1;
           if (page != howManyProductsPages) {
-            var onPageProductsTo = page*6;
-            var onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
+            let onPageProductsTo = page*6;
+            let onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
             document.getElementById('topShowingWhichElementsOnPage').innerHTML = onPageProductsText;
           }
           else {
-            var onPageProductsTo = display.length;
-            var onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
+            let onPageProductsTo = display.length;
+            let onPageProductsText = "Showing " + onPageProductsFrom + " - " + onPageProductsTo + " of ";
             document.getElementById('topShowingWhichElementsOnPage').innerHTML = onPageProductsText;
           }
 
         }
       });
 
+
+
+
+
+
+
+      //////////////////////////////////////////////////////////////////////////
+      //Displaying first 6 products
       for (let i=0; i < 6; i++ ) {
         if (i < display.length) {
           document.getElementById('product' + (i + 1)).style.display = "list-item";
@@ -2061,12 +1864,7 @@ document.addEventListener('mouseup', onMouseUp);
           document.getElementById('product' + (i + 1)).style.display = "none";
         }
       }
-
-
-
-
-
-
+      //////////////////////////////////////////////////////////////////////////
 
 
 
@@ -2074,7 +1872,6 @@ document.addEventListener('mouseup', onMouseUp);
       document.getElementById('pageArrowRight').onclick = function() {
         document.getElementById('pageArrowLeft').style.visibility = "visible";
         var pageND = document.querySelectorAll('.as');
-        //console.log(pageND.length);
         for (let i=0; i < howManyProductsPages; i++) {
           if (pageND[i].style.opacity == 1) {
             var highlightedPage = i + 1;
@@ -2108,7 +1905,6 @@ document.addEventListener('mouseup', onMouseUp);
       document.getElementById('pageArrowLeft').onclick = function() {
         document.getElementById('pageArrowRight').style.visibility = "visible";
         var pageND = document.querySelectorAll('.as');
-        //console.log(pageND.length);
         for (let i=0; i < howManyProductsPages; i++) {
           if (pageND[i].style.opacity == 1) {
             var highlightedPage = i + 1;
@@ -2141,48 +1937,15 @@ document.addEventListener('mouseup', onMouseUp);
 
 
 
-    window.onload = function() {
-      responsiveSlider();
-      filter();
-    }
-
-
-
-      // var displayempty = [];
-      //
-      //
-      //
-      // for (let i=0; i < 6; i++ ) {
-      //   if (i < displayempty.length) {
-      //     document.getElementById('product' + (i + 1)).innerHTML = '<img class="product__img" src="" alt="" /><p class="product__new">New</p><button class="btn__favourite" type="button">Heart<span class="heart"></span></button><p class="product__name">' + displayempty[i].product + '</p><p class="product__price">' + displayempty[i].price + '</p><button class="btn__addToCart" type="button">Add to Cart</button>';
-      //   }
-      //   else {
-      //     document.getElementById('product' + (i + 1)).style.display = "none";
-      //   }
-      // }
 
 
 
 
 
-
-      document.getElementById('categoriesHeader').addEventListener('click', function() {
-        document.getElementById('categoriesUl').classList.toggle('isClicked');
-      })
-
-      document.getElementById('filterHeader').addEventListener('click', function() {
-        document.getElementById('filtersFilters').classList.toggle('isClicked');
-      })
-
-
-
-
-
-
-
-
-
-
+window.onload = function() {
+  responsiveSlider();
+  filter();
+}
 
 
 
