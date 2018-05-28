@@ -1,700 +1,800 @@
 [
   {
-    "product":"fsdfasdfsadfnscof",
-    "price":"$106.87",
-    "color":"Indigo",
-    "size":"2XL",
-    "producer":"Ford"
+  "product":"Fsdfasdfscof",
+  "price":"$106.87",
+  "category":"Living",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Banshu Hamono"
   },
-{
+  {
   "product":"Voyatouch",
   "price":"$29.85",
-  "color":"Khaki",
-  "size":"2XL",
-  "producer":"Buick"
-},
-{
+  "category":"Living",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Bitwolf",
   "price":"$168.35",
-  "color":"Mauv",
-  "size":"XL",
-  "producer":"Volkswagen"
-},
-{
+  "category":"Dining",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Flowdesk",
   "price":"$69.10",
-  "color":"Pink",
-  "size":"XS",
-  "producer":"Dodge"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Fixflex",
   "price":"$183.62",
-  "color":"Mauv",
-  "size":"M",
-  "producer":"Volkswagen"
-},
-{
+  "category":"Living",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Bower"
+  },
+  {
   "product":"Keylex",
   "price":"$178.55",
-  "color":"Puce",
-  "size":"S",
-  "producer":"Ford"
-},
-{
+  "category":"Technics",
+  "color":"red",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Zaam-Dox",
   "price":"$124.69",
-  "color":"Violet",
-  "size":"M",
-  "producer":"Dodge"
-},
-{
+  "category":"Furniture",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Fixflex",
   "price":"$11.28",
-  "color":"Yellow",
-  "size":"2XL",
-  "producer":"Mazda"
-},
-{
+  "category":"Accessories",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Zathin",
   "price":"$168.03",
-  "color":"Puce",
-  "size":"M",
-  "producer":"Chrysler"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Braun"
+  },
+  {
   "product":"Greenlam",
   "price":"$183.97",
-  "color":"Khaki",
-  "size":"M",
-  "producer":"Kia"
-},
-{"product":"Tresom",
+  "category":"Technics",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Bower"
+  },
+  {"product":"Tresom",
   "price":"$30.32",
-  "color":"Purple",
-  "size":"2XL",
-  "producer":"Volkswagen"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Job",
   "price":"$134.65",
-  "color":"Orange",
-  "size":"2XL",
-  "producer":"Alfa Romeo"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Trippledex",
   "price":"$57.98",
-  "color":"Fuscia",
-  "size":"2XL",
-  "producer":"Toyota"
-},
-{
+  "category":"Dining",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Y-Solowarm",
   "price":"$70.47",
-  "color":"Turquoise",
-  "size":"XL",
-  "producer":"Mazda"
-},
-{
+  "category":"Furniture",
+  "color":"white",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Matsoft",
   "price":"$11.73",
-  "color":"Pink",
-  "size":"M",
-  "producer":"Mitsubishi"
-},
-{
+  "category":"Dining",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Bower"
+  },
+  {
   "product":"Alpha",
   "price":"$75.09",
-  "color":"Pink",
-  "size":"XS",
-  "producer":"BMW"
-},
-{
+  "category":"Living",
+  "color":"red",
+  "size":"Small",
+  "producer":"Braun"
+  },
+  {
   "product":"Home Ing",
   "price":"$193.83",
-  "color":"Violet",
-  "size":"S",
-  "producer":"Honda"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Fixflex",
   "price":"$181.39",
-  "color":"Red",
-  "size":"XS",
-  "producer":"Dodge"
-},
-{
+  "category":"Dining",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Hatity",
   "price":"$54.61",
-  "color":"Maroon",
-  "size":"S",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Dining",
+  "color":"green",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Zoolab",
   "price":"$61.80",
-  "color":"Indigo",
-  "size":"S",
-  "producer":"Toyota"
-},
-{
+  "category":"Living",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Bower"
+  },
+  {
   "product":"Opela",
   "price":"$93.11",
-  "color":"Maroon",
-  "size":"L",
-  "producer":"Toyota"
-},
-{
+  "category":"Dining",
+  "color":"green",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Zamit",
   "price":"$75.61",
-  "color":"Orange",
-  "size":"L",
-  "producer":"BMW"
-},
-{
+  "category":"Technics",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Biodex",
   "price":"$199.36",
-  "color":"Teal",
-  "size":"3XL",
-  "producer":"Dodge"
-},
-{
+  "category":"Living",
+  "color":"green",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Kanlam",
   "price":"$45.02",
-  "color":"Crimson",
-  "size":"L",
-  "producer":"Buick"
-},
-{"product":"Zaam-Dox",
+  "category":"Technics",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {"product":"Zaam-Dox",
   "price":"$197.65",
-  "color":"Mauv",
-  "size":"2XL",
-  "producer":"MINI"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Zamit",
   "price":"$40.80",
-  "color":"Maroon",
-  "size":"S",
-  "producer":"Ford"
-},
-{
+  "category":"Furniture",
+  "color":"green",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Cardguard",
   "price":"$98.83",
-  "color":"Violet",
-  "size":"XL",
-  "producer":"Acura"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Zathin",
   "price":"$189.94",
-  "color":"Fuscia",
-  "size":"XL",
-  "producer":"Pontiac"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Alpha",
   "price":"$116.42",
-  "color":"Green",
-  "size":"L",
-  "producer":"BMW"
-},
-{
+  "category":"Dining",
+  "color":"red",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Wrapsafe",
   "price":"$23.27",
-  "color":"Aquamarine",
-  "size":"XS",
-  "producer":"Mitsubishi"
-},
-{
+  "category":"Lighting",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Bower"
+  },
+  {
   "product":"Mat Lam Tam",
   "price":"$39.39",
-  "color":"Aquamarine",
-  "size":"XL",
-  "producer":"Rolls-Royce"
-},
-{
+  "category":"Living",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Mat Lam Tam",
   "price":"$57.12",
-  "color":"Indigo",
-  "size":"L",
-  "producer":"Oldsmobile"
-},
-{
+  "category":"Dining",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Bigtax",
   "price":"$189.75",
-  "color":"Teal",
-  "size":"XS",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Furniture",
+  "color":"green",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Tampflex",
   "price":"$27.49",
-  "color":"Indigo",
-  "size":"XL",
-  "producer":"Kia"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Zaam-Dox",
   "price":"$53.35",
-  "color":"Purple",
-  "size":"M",
-  "producer":"Mercury"
-},
-{
+  "category":"Technics",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Stronghold",
   "price":"$69.36",
-  "color":"Maroon",
-  "size":"M",
-  "producer":"Ford"
-},
-{
+  "category":"Furniture",
+  "color":"green",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Cookley",
   "price":"$61.80",
-  "color":"Violet",
-  "size":"2XL",
-  "producer":"Mitsubishi"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Solarbreeze"
   ,"price":"$129.56",
-  "color":"Green",
-  "size":"L",
-  "producer":"Mercedes-Benz"
-},
-{
+  "category":"Accessories",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Gembucket",
   "price":"$11.49",
-  "color":"Mauv",
-  "size":"XS",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Sonsing",
   "price":"$182.24",
-  "color":"Goldenrod",
-  "size":"L",
-  "producer":"Lexus"
-},
-{
+  "category":"Furniture",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Trippledex",
   "price":"$51.79",
-  "color":"Red",
-  "size":"2XL",
-  "producer":"Land Rover"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Cardguard",
   "price":"$189.14",
-  "color":"Yellow",
-  "size":"XL",
-  "producer":"Geo"
-},
-{
+  "category":"Dining",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Field"
+  },
+  {
   "product":"Bigtax"
   ,"price":"$74.96",
-  "color":"Orange",
-  "size":"M",
-  "producer":"Infiniti"
-},
-{
+  "category":"Dining",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Biodex",
   "price":"$42.49",
-  "color":"Yellow",
-  "size":"XS",
-  "producer":"Mercedes-Benz"
-},
-{
+  "category":"Technics",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Bitwolf",
   "price":"$33.67",
-  "color":"Puce",
-  "size":"XS",
-  "producer":"Subaru"
-},
-{
+  "category":"Living",
+  "color":"red",
+  "size":"Small",
+  "producer":"Menu"
+  },
+  {
   "product":"Daltfresh",
   "price":"$145.64",
-  "color":"Pink",
-  "size":"XS",
-  "producer":"Infiniti"
-},
-{
+  "category":"Living",
+  "color":"red",
+  "size":"Small",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Konklab",
   "price":"$95.69",
-  "color":"Fuscia",
-  "size":"2XL",
-  "producer":"Acura"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Prodder",
   "price":"$14.30",
-  "color":"Turquoise",
-  "size":"3XL",
-  "producer":"Maserati"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Vagram",
   "price":"$18.89",
-  "color":"Khaki",
-  "size":"XL",
-  "producer":"BMW"
-},
-{
+  "category":"Technics",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Asoka",
   "price":"$76.23",
-  "color":"Violet",
-  "size":"S",
-  "producer":"Pontiac"
-},
-{
+  "category":"Accessories",
+  "color":"white",
+  "size":"Small",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Viva",
   "price":"$39.44",
-  "color":"Mauv",
-  "size":"XS",
-  "producer":"Dodge"
-},
-{
+  "category":"Living",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Toughjoyfax",
   "price":"$175.33",
-  "color":"Red",
-  "size":"L",
-  "producer":"Infiniti"
-},
-{
+  "category":"Lighting",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Sub-Ex",
   "price":"$177.78",
-  "color":"Fuscia",
-  "size":"XL",
-  "producer":"Mitsubishi"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Zamit",
   "price":"$49.72",
-  "color":"Puce",
-  "size":"M",
-  "producer":"Geo"
-},
-{
+  "category":"Technics",
+  "color":"red",
+  "size":"Medium",
+  "producer":"Field"
+  },
+  {
   "product":"Voltsillam",
   "price":"$116.14",
-  "color":"Violet",
-  "size":"M",
-  "producer":"Toyota"
-},
-{
+  "category":"Accessories",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Bower"
+  },
+  {
   "product":"Ronstring",
   "price":"$112.64",
-  "color":"Red",
-  "size":"3XL",
-  "producer":"Mercury"
-},
-{
+  "category":"Lighting",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Job",
   "price":"$56.79",
-  "color":"Turquoise",
-  "size":"2XL",
-  "producer":"Toyota"
-},
-{
+  "category":"Living",
+  "color":"white",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Stringtough",
   "price":"$160.06",
-  "color":"Blue",
-  "size":"S",
-  "producer":"Mercedes-Benz"
-},
-{
+  "category":"Living",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Home Ing",
   "price":"$23.40",
-  "color":"Crimson",
-  "size":"2XL",
-  "producer":"GMC"}
+  "category":"Technics",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Menu"}
   ,
-{
+  {
   "product":"Prodder",
   "price":"$33.02",
-  "color":"Puce",
-  "size":"2XL",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Large",
+  "producer":"Field"
+  },
+  {
   "product":"Home Ing",
   "price":"$190.76",
-  "color":"Crimson",
-  "size":"M",
-  "producer":"Mazda"
-},
-{
+  "category":"Technics",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Subin",
   "price":"$40.13",
-  "color":"Blue",
-  "size":"2XL",
-  "producer":"Subaru"
-},
-{
+  "category":"Lighting",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Flexidy",
   "price":"$6.56",
-  "color":"Puce",
-  "size":"3XL",
-  "producer":"Audi"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Voyatouch",
   "price":"$66.02",
-  "color":"Khaki",
-  "size":"M",
-  "producer":"Mercedes-Benz"
-},
-{
+  "category":"Accessories",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Mat Lam Tam",
   "price":"$153.71",
-  "color":"Red",
-  "size":"XL",
-  "producer":"Lexus"
-},
-{
+  "category":"Accessories",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Zaam-Dox",
   "price":"$93.96",
-  "color":"Blue",
-  "size":"M",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Technics",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Field"
+  },
+  {
   "product":"Cardguard",
   "price":"$37.40",
-  "color":"Fuscia",
-  "size":"M",
-  "producer":"Mercury"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Job",
   "price":"$155.20",
-  "color":"Indigo",
-  "size":"M",
-  "producer":"Ford"
-},
-{
+  "category":"Lighting",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Fintone",
   "price":"$182.59",
-  "color":"Red",
-  "size":"L",
-  "producer":"Isuzu"
-},
-{
+  "category":"Accessories",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Stronghold",
   "price":"$124.06",
-  "color":"Violet",
-  "size":"S",
-  "producer":"Toyota"
-},
-{
+  "category":"Technics",
+  "color":"white",
+  "size":"Small",
+  "producer":"Bower"
+  },
+  {
   "product":"Keylex",
   "price":"$97.06",
-  "color":"Aquamarine",
-  "size":"XL",
-  "producer":"Volkswagen"
-},
-{
+  "category":"Lighting",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Daltfresh",
   "price":"$97.28",
-  "color":"Green",
-  "size":"XS",
-  "producer":"Plymouth"
-},
-{
+  "category":"Accessories",
+  "color":"red",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Cardify",
   "price":"$84.88",
-  "color":"Goldenrod",
-  "size":"M",
-  "producer":"Hyundai"
-},
-{
+  "category":"Dining",
+  "color":"blue",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Kanlam",
   "price":"$146.59",
-  "color":"Crimson",
-  "size":"2XL",
-  "producer":"Nissan"
-},
-{
+  "category":"Technics",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Wrapsafe",
   "price":"$161.53",
-  "color":"Blue",
-  "size":"S",
-  "producer":"Volkswagen"
-},
-{
+  "category":"Accessories",
+  "color":"blue",
+  "size":"Small",
+  "producer":"Bower"
+  },
+  {
   "product":"It",
   "price":"$19.00",
-  "color":"Puce",
-  "size":"XL",
-  "producer":"BMW"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Rank",
   "price":"$43.38",
-  "color":"Green",
-  "size":"3XL",
-  "producer":"Maserati"
-},
-{
+  "category":"Dining",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Kanlam",
   "price":"$180.70",
-  "color":"Teal",
-  "size":"S",
-  "producer":"Dodge"
-},
-{
+  "category":"Living",
+  "color":"green",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Viva",
   "price":"$186.85",
-  "color":"Red",
-  "size":"XS",
-  "producer":"Dodge"
-},
-{
+  "category":"Living",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Latlux",
   "price":"$189.99",
-  "color":"Orange",
-  "size":"M",
-  "producer":"BMW"
-},
-{
+  "category":"Dining",
+  "color":"white",
+  "size":"Medium",
+  "producer":"Braun"
+  },
+  {
   "product":"Transcof",
   "price":"$79.48",
-  "color":"Puce",
-  "size":"3XL",
-  "producer":"GMC"
-},
-{
+  "category":"Technics",
+  "color":"red",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Mat Lam Tam",
   "price":"$184.90",
-  "color":"Red",
-  "size":"XS",
-  "producer":"Honda"
-},
-{
+  "category":"Accessories",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Subin",
   "price":"$193.07",
-  "color":"Turquoise",
-  "size":"XS",
-  "producer":"Chrysler"
-},
-{
+  "category":"Accessories",
+  "color":"white",
+  "size":"Small",
+  "producer":"Braun"
+  },
+  {
   "product":"Hatity",
   "price":"$132.94",
-  "color":"Violet",
-  "size":"3XL",
-  "producer":"Lexus"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Subin",
   "price":"$191.66",
-  "color":"Aquamarine",
-  "size":"L",
-  "producer":"Mitsubishi"
-},
-{
+  "category":"Accessories",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Bower"
+  },
+  {
   "product":"Asoka",
   "price":"$95.95",
-  "color":"Turquoise",
-  "size":"2XL",
-  "producer":"BMW"
-},
-{
+  "category":"Lighting",
+  "color":"white",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Stim",
   "price":"$89.64",
-  "color":"Indigo",
-  "size":"S",
-  "producer":"Toyota"
-},
-{
+  "category":"Dining",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Bower"
+  },
+  {
   "product":"Cardguard",
   "price":"$168.67",
-  "color":"Crimson",
-  "size":"XL",
-  "producer":"Buick"
-},
-{
+  "category":"Furniture",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Lotstring",
   "price":"$186.69",
-  "color":"Khaki",
-  "size":"M",
-  "producer":"Ford"
-},
-{
+  "category":"Technics",
+  "color":"grey",
+  "size":"Medium",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Fix San",
   "price":"$98.09",
-  "color":"Teal",
-  "size":"2XL",
-  "producer":"Buick"
-},
-{
+  "category":"Lighting",
+  "color":"green",
+  "size":"Large",
+  "producer":"Banshu Hamono"
+  },
+  {
   "product":"Biodex",
   "price":"$55.08",
-  "color":"Puce",
-  "size":"3XL",
-  "producer":"Pontiac"
-},
-{
+  "category":"Accessories",
+  "color":"red",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Subin",
   "price":"$58.25",
-  "color":"Pink",
-  "size":"XL",
-  "producer":"Mercury"
-},
-{
+  "category":"Lighting",
+  "color":"red",
+  "size":"Large",
+  "producer":"Henry Wilson"
+  },
+  {
   "product":"Domainer",
   "price":"$117.17",
-  "color":"Pink",
-  "size":"2XL",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Living",
+  "color":"red",
+  "size":"Large",
+  "producer":"Field"
+  },
+  {
   "product":"Bitwolf",
   "price":"$136.29",
-  "color":"Khaki",
-  "size":"S",
-  "producer":"Chevrolet"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Field"
+  },
+  {
   "product":"Alphazap",
   "price":"$198.18",
-  "color":"Aquamarine",
-  "size":"3XL",
-  "producer":"BMW"
-},
-{
+  "category":"Technics",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"It",
   "price":"$181.36",
-  "color":"Khaki",
-  "size":"L",
-  "producer":"BMW"
-},
-{
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Large",
+  "producer":"Braun"
+  },
+  {
   "product":"Opela",
   "price":"$8.49",
-  "color":"Teal",
-  "size":"L",
-  "producer":"Porsche"
-},
-{
+  "category":"Lighting",
+  "color":"green",
+  "size":"Large",
+  "producer":"Menu"
+  },
+  {
   "product":"Sonair",
   "price":"$101.35",
-  "color":"Goldenrod",
-  "size":"L",
-  "producer":"Acura"
-},
-{
+  "category":"Furniture",
+  "color":"blue",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Zamit",
   "price":"$23.36",
-  "color":"Orange",
-  "size":"3XL",
-  "producer":"Mercedes-Benz"
-},
-{
+  "category":"Accessories",
+  "color":"white",
+  "size":"Large",
+  "producer":"Elevenplus"
+  },
+  {
   "product":"Bigtax",
   "price":"$123.25",
-  "color":"Khaki",
-  "size":"XS",
-  "producer":"Nissan"
+  "category":"Furniture",
+  "color":"grey",
+  "size":"Small",
+  "producer":"Banshu Hamono"
   }
 ]
