@@ -585,7 +585,7 @@ h3 {
         @media all and (max-width: 992px) {
           .productSection .productSection__main .filters .filters__filters {
             width: calc(100% - 84px);
-            margin-top: 50px;
+            margin-top: 72px;
             padding: 20px 40px;
             border: 2px solid #eeeeee;
             position: absolute;
