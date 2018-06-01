@@ -577,6 +577,8 @@ h3 {
           @media all and (max-width: 500px) {
             .productSection .productSection__main .filters .filters__categories .categories__ul .filters__li--categories .category {
               font-size: 16px; } }
+          .productSection .productSection__main .filters .filters__categories .categories__ul .filters__li--categories .category .quantity--first {
+            width: 110%; }
         @media all and (max-width: 500px) {
           .productSection .productSection__main .filters .filters__categories .categories__ul .filters__li--categories {
             padding: 9px 0; } }
